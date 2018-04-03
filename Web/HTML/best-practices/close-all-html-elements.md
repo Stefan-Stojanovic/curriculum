@@ -1,4 +1,4 @@
-# Close all HTML elements
+---
 author: stefan.stojanovic
 
 levels:
@@ -14,39 +14,21 @@ stub: true
 tags:
   - obscura
   - introduction
-
-
+---
+# Close all HTML elements
 ---
 ## Content
 
-HTML elements consist of a start and end tag, with content inbetween the tags.
+In HTML5 writing the open and close tags are optional. For some, you can write just the open one and omit the closing one.
 
-Example:
+Like so:
 ```
-<p>Content goes here</p>
-```
-Result:
-```
-Content goes here
-```
-In this example, the `<p>` is the starting tag of a paragraph, "Content goes here" is the input and the `</p>` is the closing tag.
-
-Most HTML elements have to have a closing tag to be displayed properly. However, some tags, like the paragraph tag in the example above, can be omitted.
-
-Example:
-```
-<p>Content goes here
-```
-Result:
-```
-Content goes here
+<p> Paragraph
+<
 ```
 
-In HTML5 there are no strict rules for some tags, however it is best practice to use closing tags. Why?
-
-Because, even though HTML5 assumes a new tag cannot start without the previous one being closed, there are older browsers versions that do not support HTML5. These browsers use XHTML or HTM, both of which have stricter rules.
-
-Also, certain tags do not have to have an open tag either, like the `<body>`, `<head>`, `<html>`, etc.. However, for easier readability, it is best to use both the starting and ending tags of an HTML element.
+This can be executed normally by the browser, however, it is not recommended. 
+For easier readability and making sure everything executes properly, it is best to use both the start and end tags when writing HTML.
 
 ---
 ## Practice
