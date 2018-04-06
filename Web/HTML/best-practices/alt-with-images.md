@@ -22,6 +22,7 @@ tags:
 The `alt` attribute exists to specify an alternate text for an image that cannot be displayed.
 
 It provides extra information to the user if for some reason they cannot view the image. Whether it is a broken link, an unsupported image format, a poor internet connection, or if the users uses a screen reader.
+
 Example:
 ```
 <!DOCTYPE html>
