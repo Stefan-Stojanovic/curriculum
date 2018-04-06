@@ -19,16 +19,17 @@ tags:
 ---
 ## Content
 
-The alt attribute exists to specify an alternate text for an image that cannot be displayed.
-It provides information to the user if for some reason they cannot view the image.
+The `alt` attribute exists to specify an alternate text for an image that cannot be displayed.
 
+It provides extra information to the user if for some reason they cannot view the image. Whether it is a broken link, an unsupported image format, a poor internet connection, or if the users uses a screen reader.
 Example:
 ```
 <!DOCTYPE html>
 <html>
 <body>
 
-<img src="brokenglass.gif" alt="Broken glass">
+<img src="brokenglass.gif" 
+      alt="Broken glass">
 
 </body>
 </html>
@@ -49,13 +50,13 @@ However, if the image is only for decoration, then the `alt=""` can be left empt
 
 Is an empty alt attribute considered appropriate?
 
-???
+`<img src=”image.png” alt=””>`
+
 ???
 ???
 ???
 ???
 
-* <img src=”image.png” alt=””>
 * Yes, when the image is purely decorative.
 * No, a value is always required.
 * No, as the image will not properly display.
