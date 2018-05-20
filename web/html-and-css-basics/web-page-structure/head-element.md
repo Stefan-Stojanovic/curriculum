@@ -78,7 +78,7 @@ Larger example:
 </html>
 ```
 
-**Note: WHen it comes to ordering CSS and JS, always add CSS first. For an explanation check the `learn more` links section of this insight.**
+**Note: When it comes to ordering CSS and JS, always add CSS first. For an explanation check the `learn more` links section of this insight.**
 
 ---
 ## Practice
