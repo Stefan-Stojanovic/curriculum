@@ -102,12 +102,24 @@ Write the form code that creates a submit button.
 
 `<??? ???="???" ???="Send">`
 
+Which line of code defines the button that sends the data when clicked?
+
+???
+
 * input
 * type
 * submit
 * value
+* `<input type="submit" value="Send">`
 * send
 * data
+* `<submit value="Send">`
+* `<input submit="Send">`
+* `<input value="submit" type="Send">`
+
+
+---
+## Revision
 
 Write the form code that creates a reset button.
 
@@ -119,18 +131,6 @@ Write the form code that creates a reset button.
 * value
 * send
 * data
-
----
-## Revision
-
-Which line of code defines the button that sends the data when clicked?
-
-???
-
-* `<input type="submit" value="Send">`
-* `<submit value="Send">`
-* `<input submit="Send">`
-* `<input value="submit" type="Send">`
 
 ---
 ## Quiz
