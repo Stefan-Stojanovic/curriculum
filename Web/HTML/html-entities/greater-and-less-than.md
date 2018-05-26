@@ -58,27 +58,28 @@ Write the code that will display this HTML tag properly: "`<p>` is an HTML parag
 
 ???p??? is an HTML paragraph tag.
 
-* &lt;
-* &gt;
-* &rt;
-* <
-* >
+* `&lt;`
+* `&gt;`
+* `&rt;`
+* `<`
+* `>`
 
 ---
 ## Revision
 
-In HTML the browser always assumes *<* and *>* represent the start and end of an HTML tag. Identify the correct ways of displaying these two characters?
+In HTML the browser always assumes `<` and `>` represent the start and end of an HTML tag. Identify the incorrect ways of displaying these two characters?
 
-+ Using their character entity numbers(`&#60;`,`&#62;`)
-- Using the designated (<) and (>) buttons on the keyboard
-+ Using their character entity name(`&lt;`,`&gt;`)
-+ Using either their character entity name or number
-- Enclosing the characters in single quoatation '<','>'
+???
+
+* Using the designated (<) and (>) buttons on the keyboard
+* Using their character entity numbers(`&#60;`,`&#62;`)
+* Using their character entity name(`&lt;`,`&gt;`)
+* Using either their character entity name or number
 
 ---
 ## Quiz
 
-How much do you know about HTML character entities?
+### How much do you know about HTML character entities?
 
 What will be displayed in this line of code:
 " `<p> 1 &lt; 3 &lt;/p&gt;` "
