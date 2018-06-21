@@ -111,12 +111,12 @@ What HTML character entity is used to prevent the browser from breaking the line
 
 `<p>5???km</p>`
 
-* &nbsp;
-* &ensp;
-* &ltsp;
-* empty space: " "
-* &space
-* &gap
+* `&nbsp;`
+* `&ensp;`
+* `&ltsp;`
+* `empty space: " "`
+* `&space`
+* `&gap`
 
 ---
 ## Quiz
