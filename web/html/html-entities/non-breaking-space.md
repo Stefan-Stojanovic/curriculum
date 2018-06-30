@@ -1,5 +1,4 @@
 ---
-
 author: stefan.stojanovic
 
 levels:
@@ -24,11 +23,7 @@ aspects:
 ---
 ## Content
 
-In HTML, the non-breaking space is a character entity which can:
-
-* Create white space between words or web page elements
-* Stop the browser from breaking a line in the wrong place.
-
+The HTML non-breaking space is a character entity used for either creating white space between words or web page elements, or to stop a browser from breaking a line where it shouldn't
 
 To insert a non-breaking space you would use either the HTML entity *name* or the HTML entity *number* :
 
@@ -41,11 +36,7 @@ HTML Entity Name
 &nbsp;
 ```
 
->Uses for the Non-Breaking Space
-
-**Prevent Line Break with Non-Breaking Space**
-
-Sometimes you might want the force the browser to not break the line between certain words or web page elements. To do so, you insert the non-breaking space between words you don't want to be separated. E.g. Mr. John Doe:
+For instance, when you want to force a browser to not break a line at a certain place you would add a non-breaking space between words/characters you don't want to be separated on different lines. Let's say you have a name like this: `Mr. John Doe`, to force the browser to not split it, you would add spaces like so:
 
 Input:
 ```
@@ -56,9 +47,9 @@ Result:
 Mr. John Doe
 ```
 
-Another example of forcing the browser to keep things together might be a space between 2 pictures.
+Another great use for the non-breaking space is forcing the browser to keep 2 pictures side-by-side.
 
-Input:
+Example:
 ```
 <p>
 <img src="http://i.picresize.com/images
@@ -74,23 +65,16 @@ Result:
 
 [logo]: http://i.picresize.com/images/2018/02/18/N8MeY.png
 
-**Create Whitespace with Non-Breaking Space**
 
-The non-breaking space can be used to create white space between web page elements. Like in the example above, white space is created between the 2 pictures by using the non-breaking space.
+Also, the non-breaking space can be used to create white space. Like in the example above, the non-breaking space is used to create the white space separating the 2 pictures.
 
-**Prevent Table Cell Collapse with Non-Breaking Space**
-
-If you have a table with an empty cell within your web page, you should insert the non-breaking space HTML coding in the empty cell to prevent the cell from collapsing.
+Furthermore, if you have a table with an empty cell within your web page, you should insert a non-breaking space character in the empty cell to prevent the cell from collapsing.
 
 ```
 <td>&nbsp;</td>
 ```
 
-**What Not to Use the Non-Breaking Space For**
-
->Creating Indented Paragraphs
-
-Non-breaking space should not be used to indent a paragraph. This is because some browsers ignore multiple instances of the non-breaking space so indenting this way may not always work. To create an indent for your paragraphs it is better to use your stylesheet.
+**Note: You should never use the `non-breaking space` for indenting a paragraph. This is because some browsers ignore multiple instances of the non-breaking space so indenting this way may not always work. To create an indent for your paragraphs it is better to use CSS.** 
 
 ---
 ## Practice
@@ -111,12 +95,12 @@ What HTML character entity is used to prevent the browser from breaking the line
 
 `<p>5???km</p>`
 
-* &nbsp;
-* &ensp;
-* &ltsp;
-* empty space: " "
-* &space
-* &gap
+* `&nbsp;`
+* `&ensp;`
+* `&ltsp;`
+* `empty space: " "`
+* `&space`
+* `&gap`
 
 ---
 ## Quiz
@@ -127,8 +111,7 @@ What does the "&nbsp;" within this line of code do?
 
 `<img src="image1.png" alt="">&nbsp;<img src="image2.png" alt="">`
 
-
 * Adds an empty character of space between the images.
-* Prevents the images from starting on new line like word wrap.
+* Prevents the images from starting on a new line like word wrap.
 * Removes any space between the images.
 * Useful when pulling image files from a database.
