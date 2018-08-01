@@ -67,7 +67,7 @@ This is how the lists would look:
 ## Practice
 
 Complete the following snippet to change the default list marker:
-```
+```css
 ul.specialList {
  ???:
           url('img.jpg');
