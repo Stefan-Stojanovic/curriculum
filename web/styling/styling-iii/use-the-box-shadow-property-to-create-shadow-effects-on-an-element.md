@@ -63,7 +63,7 @@ You can see below the difference. The second square has `inset` shadowing:
 
 The first two parameters in the following code snippet are the ??? of the shadow.
 
-```
+```css
 div {
   box-shadow: 4px 4px 2px red;
 }
