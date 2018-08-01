@@ -27,7 +27,7 @@ Use `letter-spacing` to increase legibility of the headings and to properly just
 
 For use in headings:
 
-```
+```css
 h2 {
   font: normal 1.5em Georgia, serif;
   letter-spacing: 0.1em;
