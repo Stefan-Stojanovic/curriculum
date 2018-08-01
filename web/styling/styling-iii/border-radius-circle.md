@@ -28,7 +28,7 @@ links:
 
 Any element can be given rounded corners by applying `border-radius`:
 
-```
+```css
 element {
   border-radius: 50%;
   width: 200px;
