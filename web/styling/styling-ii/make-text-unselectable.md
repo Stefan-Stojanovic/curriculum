@@ -55,7 +55,7 @@ Once the class is assigned to a paragraph like below, the text will no longer be
 
 Complete the method which can be used to make text in a web page unselectable:
 
-```
+```css
 .unselectable { 
   ???: none; 
 } 
