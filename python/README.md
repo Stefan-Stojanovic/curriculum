@@ -21,3 +21,4 @@ startingPoints:
   - title: Exploratory Data Analysis
     subtitle: Perform exploratory data analysis using Python tools.
     course: $python-numpy
+
