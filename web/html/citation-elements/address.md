@@ -1,26 +1,21 @@
 ---
 author: Stefan-Stojanovic
-type: coding
+type: normal
 category: must-know
 stub: true
 links:
   - >-
     [HTML <address>
     element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/address){documentation}
-setupCode:
-  setupHtml: |
-    <address>
-      Authors Email:
-      <a href="http://www.website.com/contact">
-        www.website.com
-      </a>.<br>
-      Author address:<br>
-      Company name<br>
-      Some Street address<br>
-      City, State<br>
-      Country
-    </address>
-
+practiceQuestion:
+  formats:
+    - fill-in-the-gap
+  context: standalone
+revisionQuestion:
+  formats:
+    - fill-in-the-gap
+    - type-in-the-gap
+  context: standalone     
 ---
 
 # The address Element
@@ -67,3 +62,34 @@ Beside representing contact information about the author of the document, the `<
 
 On the other hand, if you want to represent an arbitrary address (such as postal addresses), which are not related to the contact information, you should use the `<p>` element rather than the `<address>` element.
 
+
+---
+
+## Practice
+
+Which statement about the `<address>` element is not correct?
+
+???
+
+- Best for postal addresses
+- Contact information of author
+- `When placed in <body> represents information for the document`
+- `When placed in <article> represents information for that article`
+- Displayed as block element
+- Default font-style is italic
+
+
+---
+
+## Revision
+
+Which HTML element is used to contain contact information for its nearest `<article>` or `<body>` that is not related to the primary contact information of the site?
+
+```html
+???
+```
+- `<address>`
+- `<contact>`
+- `<info>`
+- `<postal>`
+- `<authorship>`
