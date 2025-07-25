@@ -1,8 +1,7 @@
 ---
 author: Stefan-Stojanovic
-type: coding
-category: must-know
-stub: true
+type: normal
+category: coding
 links:
   - >-
     [HTML <address>
