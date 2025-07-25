@@ -19,7 +19,7 @@ webSetupCode:
       Company name<br>
       Some Street address<br>
       City, State<br>
-      Country
+      Country<br>
     </address>
     
 ---
