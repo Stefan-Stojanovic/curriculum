@@ -7,7 +7,7 @@ links:
     [HTML <address>
     element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/address){documentation}
 
-setupCode:
+webSetupCode:
   startingHtml: |
     <address>
       Authors Email:
@@ -34,7 +34,7 @@ The HTML `<address>` element is used to provide contact information about the au
 ![address](https://img.enkipro.com/9ec8992af472e5a9d37e0d1f01a1d69a.png)
 
 This element can contain different types of content:
-
+ 
 - Physical address
 - URL
 - E-mail address
