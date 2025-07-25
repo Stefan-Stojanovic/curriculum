@@ -16,6 +16,20 @@ revisionQuestion:
     - fill-in-the-gap
     - type-in-the-gap
   context: standalone
+setupCode:
+  setupHtml: |
+    <address>
+      Authors Email:
+      <a href="http://www.website.com/contact">
+        www.website.com
+      </a>.<br>
+      Author address:<br>
+      Company name<br>
+      Some Street address<br>
+      City, State<br>
+      Country
+    </address>
+
 ---
 
 # The address Element
