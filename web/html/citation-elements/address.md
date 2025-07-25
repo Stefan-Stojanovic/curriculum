@@ -8,20 +8,7 @@ links:
     [HTML <address>
     element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/address){documentation}
 
-webSetupCode:
-  startingHtml: |
-    <address style="">
-      Authors Email:
-      <a href="http://www.website.com/contact">
-        www.website.com
-      </a>.<br>
-      Author address:<br>
-      Company name<br>
-      Some Street address<br>
-      City, State<br>
-      Country
-    </address>
-    
+
 ---
 
 # The address Element
