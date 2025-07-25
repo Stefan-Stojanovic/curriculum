@@ -10,7 +10,7 @@ links:
 setupCode:
   startingHtml: |
     <address>
-      Authors Emails:
+      Authors Email:
       <a href="http://www.website.com/contact">
         www.website.com
       </a>.<br>
@@ -33,7 +33,7 @@ The HTML `<address>` element is used to provide contact information about the au
 
 ![address](https://img.enkipro.com/9ec8992af472e5a9d37e0d1f01a1d69a.png)
 
-This element can contain different types of content:
+This element can contain different types of contents:
 
 - Physical address
 - URL
