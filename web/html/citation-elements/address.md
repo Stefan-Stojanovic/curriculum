@@ -10,7 +10,7 @@ links:
 
 webSetupCode:
   startingHtml: |
-    <address>
+    <address style="">
       Authors Email:
       <a href="http://www.website.com/contact">
         www.website.com
