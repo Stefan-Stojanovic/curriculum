@@ -27,8 +27,8 @@ revisionQuestion:
 
 ## Content
 
-The HTML inputs of type `submit` and `reset` are rendered as buttons with `onClick` events. They both send a value to the server when clicked. The `type="submit` button sends the data from the form to the server. Whereas the `type="reset"` resets the data in the form to it's initial or default state.
 
+blah blah blah
 Example submit:
 
 ```html
