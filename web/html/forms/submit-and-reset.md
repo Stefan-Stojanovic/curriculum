@@ -1,178 +1,70 @@
 ---
 author: Stefan-Stojanovic
 type: normal
-category: must-know
-links:
-  - >-
-    [HTML
-    type="reset"](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/reset){documentation}
-  - >-
-    [HTML
-    type="submit"](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/submit){documentation}
-practiceQuestion:
-  formats:
-    - fill-in-the-gap
-  context: standalone
-revisionQuestion:
-  formats:
-    - fill-in-the-gap
-    - type-in-the-gap
-  context: standalone
+category: coding
+webSetupCode:
+  startingHtml: |
+    <!-- 
+    Welcome to the Web Playground!
+
+    This is your index.html file. 
+    When you're ready, hit "Run" to see the result in the preview.
+    -->
+
+    <div class="your-code">
+      <h1>Hello from the Web Playground!</h1>
+      <p>This is your starting HTML.</p>
+    </div>
+  startingCss: |
+    /* 
+    This is your style.css file.
+
+    When you hit "Run", these styles will apply to the HTML.
+    */
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #3E94EC;
+    }
+  startingJs: |
+    // This is your script.js file.
+    // Hit "Run" and check the console to see this message.
+    
+    console.log("Welcome to the Web Playground!");
+
 ---
 
-# Submit & Reset
-
+# Web Playground
 
 ---
 
 ## Content
 
+We will be using this playground to practice **HTML**, **CSS**, and **JavaScript**.  
 
-blah blah blah
-Example submit:
+Go ahead and take a look at the **Code** tab.  
 
-```html
-<input
-  type="submit"
-  value="Submit">
-```
+You have 3 files that you can switch between on the bottom:
+- `index.html`
+- `style.css`
+- `script.js`
 
-![form-submit-btn](https://img.enkipro.com/e12a58288fba3ed2b0971eba992c7661.png)
+Hit **Run** right now to see how it works!  
 
-Example reset:
-
-```html
-<input
-  type="reset"
-  value="Reset data">
-```
-
-![form-reset-btn](https://img.enkipro.com/654728094da876108365fe3a2645c49f.png)
-
-[View CodePen](https://codepen.io/enkidevs/pen/QBdKym)
-
-The `value` of either type is represented with a `DOMString`. This is something the client never sees, but the server uses this `value` along with the `name` value as a `name/value` pair upon the submission of the form. In this case, the `name/value` pair would be `text=userinput`. On the other hand, if no value is specified, the buttons will have a default value set by the browser.
-
-The `type="submit"` button is used to submit a form.
-
-Example submit and reset with one text field:
-
-```html
-<form>
-    <label
-      for="name">Name:
-    </label>
-    <input
-      id="name" type="text"
-      name="text">
-    <input
-      type="submit"
-      value="Next">
-  <input
-    type="reset"
-    value="Reset name">
-</form>
-```
-
-#### form-submit-reset
-
-[View CodePen](https://codepen.io/enkidevs/pen/ZjLpWm)
-
-Furthermore, you can add shortcuts both to the `submit` and `reset` buttons via the `accesskey` attribute:
-
-Previous example with shortcuts added:
-
-```html
-<form>
-    <label
-      for="name">Name:
-    </label>
-    <input
-      id="name" type="text"
-      name="text">
-    <input
-      type="submit"
-      value="Next"
-      accesskey="s">
-  <input
-    type="reset"
-    value="Reset name"
-    accesskey="r">
-</form>
-```
-
-[View CodePen](https://codepen.io/enkidevs/pen/xJgEVv)
-
-In this example, on a Mac, pressing `Control`+`Option`+`S`/`R` triggers the `Next`/`Reset name` buttons respectively, while on Windows the shortcut is `Alt`+`S`/`R`.
-
-Nevertheless, even though we provide the access key, there is no way for the user to know what the `accesskey` shortcut is without giving them a tooltip or a hint with the information somewhere on the page.
-
+If you’re unsure how to begin, check the hints[1].
 
 ---
 
-## Practice
+## Footnotes
 
-Write the form code that creates a reset button.
-
-```html
-<??? 
-  ???="???" 
-  ???="Reset"
->
-```
-
-Which line of code defines the button that sends the data when clicked?
-
-???
-
-- input
-- type
-- reset
-- value
-- `<input type="submit" value="Send">`
-- send
-- data
-- `<submit value="Send">`
-- `<input submit="Send">`
-- `<input value="submit" type="Send">`
-
-
----
-
-## Revision
-
-Write the form code that creates a submit button.
-
-```html
-<??? 
-  ???="???" 
-  ???="Send"
->
-```
-
-- input
-- type
-- submit
-- value
-- send
-- data
-
-
----
-
-## Quiz
-
-### How much do you know about buttons within forms?
-
-
-If values are not assigned to reset and submit buttons stating what text the buttons should display, what happens?
-
-```html
-<input type="submit">
-<input type="reset">
-```
-
-- "Submit" & "Reset" text is added by default.
-- Nothing is added to the HTML page.
-- They display as buttons without text.
-- The page breaks
+[1: Hints]
+- Check the `index.html` file for the structure of your page.  
+- See how `style.css` changes its appearance.  
+- Add logic in `script.js` (change text, handle taps, print logs, and much more).
