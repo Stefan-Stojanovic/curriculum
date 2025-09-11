@@ -7,6 +7,7 @@ insights:
   - css-defined
   - html-css-code
   - html-css-browser
+  - codepen-intro
 aspects:
   - introduction
  
