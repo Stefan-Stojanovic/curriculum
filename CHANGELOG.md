@@ -48,6 +48,11 @@ Types of change:
 
 ### Fixed
 
+## Sep 11 2025
+
+### Changed
+- [test - test - test](https://github.com/Stefan-Stojanovic/curriculum/pull/20)
+
 ## February 13th 2025
 
 ### Added
