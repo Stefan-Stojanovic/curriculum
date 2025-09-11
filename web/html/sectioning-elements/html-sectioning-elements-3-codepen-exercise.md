@@ -61,7 +61,7 @@ webSetupCode:
 ---
 
 ## Content
-
+ 
 In this exercise, you will **wrap the main content of the page** in the appropriate semantic element.  
 
 Use the `<main>` element to identify the dominant content of the page.  
