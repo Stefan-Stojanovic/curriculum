@@ -68,4 +68,4 @@ If you’re unsure how to begin, check the hints[1].
 [1: Hints]
 - Check the `index.html` file for the structure of your page.  
 - See how `style.css` changes its appearance.  
-- Open the console (Ctrl+Shift+J / Cmd+Option+J) to view messages from `script.js`.  
+- Add logic in `script.js` (change text, handle taps, print logs, and much more).
