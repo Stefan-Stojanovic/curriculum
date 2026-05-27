@@ -17,19 +17,19 @@ revisionQuestion:
 ---
 ## Content
 
-Imagine your team demos a support-summary feature.
+Imagine your team demos a customer-escalation summary feature.
 
-A customer writes a long ticket. The AI reads the thread and produces a short summary for the support agent. In the demo, it works well: the summary is readable, the tone is professional, and the important details are present.
+A customer writes a long, messy ticket thread. The AI produces a short escalation summary for the engineer who may need to investigate. In the demo, it works well: the summary is readable, the tone is professional, and the important details are present.
 
 That demo is useful evidence, but it is not enough evidence to ship.
 
 Production inputs are messier:
 
 - users paste partial logs, screenshots, quoted emails, and angry follow-ups
-- tickets mix billing, technical, and account details
+- tickets mix billing, technical, account, and deployment details
 - the source conversation may contain false assumptions from the customer
 - the model may confidently summarize something that was never confirmed
-- one bad summary can send an agent down the wrong path
+- one bad summary can send the on-call engineer down the wrong path
 
 This is the key shift: an AI feature can be impressive and still be probabilistic.
 
@@ -40,9 +40,8 @@ Engineers do not solve this by hoping the prompt is good enough. They design the
 ---
 ## Revision
 
-A support-summary demo is not enough to ship because production inputs are messier and AI behavior is ???.
+A customer-escalation summary demo is not enough to ship because production inputs are messier and AI behavior is ???.
 
 - probabilistic
 - compiled
 - encrypted
-

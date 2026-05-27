@@ -25,12 +25,12 @@ Across this course, you will learn how to reason about:
 - **model choice**: how capability, cost, latency, and risk change by model
 - **evals**: how to test behavior on representative cases before shipping
 - **review gates**: when a human, policy, or deterministic check should block an output
-- **observability**: what to log and monitor when behavior changes over time
+- **observability**: what to log and monitor when behavior changes after release
 - **guardrails**: constraints, fallbacks, and escalation paths that limit damage
 
 You will also practice deciding where AI belongs in a workflow.
 
-Some AI behavior can be fully automated because the impact is low and errors are easy to catch. Some should draft or rank options while a person decides. Some should not be automated until the team has better data, controls, or tolerance for failure.
+Some AI behavior can be fully automated because the impact is low and errors are easy to catch. Some should draft or rank options while a person decides. Some should stay behind a review gate until the team has better data, controls, or tolerance for failure.
 
 Good AI engineering is not blind optimism or blanket rejection. It is matching the system design to the job, evidence, and consequences.
 
@@ -42,4 +42,3 @@ An AI eval helps a team test behavior on ??? cases before shipping.
 - representative
 - random
 - perfect
-

@@ -19,14 +19,14 @@ practiceQuestion:
 
 The lessons in this course are short, but the decisions are real engineering decisions.
 
-You will see scenarios like support summaries, search assistants, document review, code generation, triage, and workflow automation. The point is not to memorize a single architecture. The point is to learn how to evaluate AI behavior under constraints.
+You will see scenarios like escalation summaries, search assistants, document review, code generation, triage, and workflow automation. The point is not to memorize a single architecture. The point is to learn how to evaluate AI behavior under constraints.
 
 Expect to practice:
 
 - reading a system proposal and spotting reliability gaps
 - turning a vague "AI should help here" idea into acceptance criteria
 - choosing an eval or review gate for a specific failure mode
-- deciding when cost or latency makes a stronger model a poor choice
+- deciding when cost, latency, or review load makes a stronger model a poor release choice
 - identifying when fallback behavior is safer than forcing an answer
 
 When an exercise asks you to connect the idea to your own work, use the comments to reason through a feature, incident, or workflow you know. If you want a second perspective, ask Enki AI in the comments to challenge your risk assessment.
@@ -39,4 +39,3 @@ When a lesson asks you to connect an AI reliability idea to your own system, a u
 - impact
 - slogan
 - color
-

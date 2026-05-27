@@ -19,7 +19,7 @@ practiceQuestion:
 
 AI reliability is rarely a single dial called "better."
 
-For the support-summary feature, a larger model might produce better summaries, but it may also increase latency and cost. A stricter prompt might reduce risky claims, but it may omit useful detail. Human review may catch mistakes, but it adds operational load.
+For the customer-escalation summary feature, a larger model might produce better summaries, but it may also increase latency and cost. A stricter prompt might reduce risky claims, but it may omit useful detail. Human review may catch mistakes, but it adds operational load.
 
 Engineers usually balance several constraints:
 
@@ -28,11 +28,12 @@ Engineers usually balance several constraints:
 - **latency**: is the response fast enough for the workflow?
 - **variance**: how much does output quality change across cases?
 - **review effort**: who checks the output, and how often?
+- **operational fit**: does the workflow still work during incidents or traffic spikes?
 - **failure impact**: what happens when the system is wrong?
 
 These are system design tradeoffs, not prompt cleverness contests.
 
-A low-impact internal draft can tolerate more variance. A customer-visible action, billing decision, medical note, security alert, or irreversible workflow step needs a higher quality bar and stronger controls.
+A low-impact internal draft can tolerate more variance. A customer-visible action, billing decision, medical note, security alert, incident update, or irreversible workflow step needs a higher quality bar and stronger controls.
 
 The practical question is:
 
@@ -46,4 +47,3 @@ If an AI output can trigger a high-impact customer-visible action, the system us
 - controls
 - colors
 - slogans
-

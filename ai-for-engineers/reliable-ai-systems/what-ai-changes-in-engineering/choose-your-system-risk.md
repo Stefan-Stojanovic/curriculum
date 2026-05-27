@@ -7,7 +7,7 @@ category: discussion
 
 practiceQuestion:
   formats:
-    - type-in-the-gap
+    - fill-in-the-gap
   context: standalone
 
 revisionQuestion:
@@ -39,15 +39,17 @@ Write down four things:
 1. The intended output
 2. What could go wrong
 3. What evidence would show it is good enough
-4. What should trigger review, fallback, or escalation
+4. Who is affected when it is wrong
+5. What should trigger review, fallback, or escalation
 
 For example:
 
-> Feature: support-ticket summary  
-> Intended output: a short summary for the agent  
-> Risk: it invents a customer claim  
+> Feature: customer-escalation summary  
+> Intended output: a short summary for the on-call engineer  
+> Risk: it invents a root cause  
 > Evidence: eval cases with known source facts pass the no-invention check  
-> Review trigger: billing, legal, angry customer, or missing source context
+> Impact: the wrong team may investigate the wrong issue  
+> Review trigger: billing, legal, angry customer, missing source context, or high-severity incident
 
 This is a small version of the engineering habit behind reliable AI systems: define the job, name the failure, gather evidence, and choose controls that match the impact.
 
@@ -56,9 +58,11 @@ If you want to stress-test your answer, post it in the comments and ask Enki AI 
 ---
 ## Practice
 
-For your chosen AI feature, name one output, one failure risk, one piece of evidence, and one review or fallback trigger:
+For your chosen AI feature, a useful risk sketch should include output, failure risk, evidence, affected owner or user, and review or fallback ???.
 
-???
+- trigger
+- color
+- title
 
 ---
 ## Revision
@@ -68,4 +72,3 @@ Reliable AI design starts by defining the job, naming the failure, gathering evi
 - controls
 - colors
 - slogans
-

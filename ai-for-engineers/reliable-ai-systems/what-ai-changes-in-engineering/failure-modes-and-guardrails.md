@@ -33,7 +33,7 @@ Common AI failure modes include:
 - overconfident summaries
 - unstable output across similar inputs
 
-For the support-summary feature, a hallucinated fact might say the customer already tried a fix they never mentioned. Missing context might ignore that the customer is asking about billing, not product behavior. Unsafe automation might route the ticket to the wrong queue without review.
+For the customer-escalation summary feature, a hallucinated fact might say the customer already tried a fix they never mentioned. Missing context might ignore that the customer is asking about billing, not product behavior. Unsafe automation might page an engineering team for a case that should stay in support.
 
 Guardrails are controls that reduce the chance or impact of those failures.
 
@@ -43,7 +43,7 @@ They can include:
 - checks against required source fields
 - fallback behavior when inputs are incomplete
 - human review for high-impact cases
-- logging of inputs, outputs, model versions, and decisions
+- logging of inputs, outputs, model versions, prompts, and decisions
 - monitoring for drift, complaints, or unusual failure patterns
 - escalation when confidence is low or policy risk is high
 
@@ -66,4 +66,3 @@ If an AI support summary lacks enough source context, a safer system may trigger
 - review
 - celebration
 - compression
-
