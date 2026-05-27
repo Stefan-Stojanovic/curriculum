@@ -1,14 +1,9 @@
 ---
-author: enki-ai
+author: Stefan-Stojanovic
 
 type: normal
 
 category: caveat
-
-practiceQuestion:
-  formats:
-    - fill-in-the-gap
-  context: standalone
 
 revisionQuestion:
   formats:
@@ -22,39 +17,28 @@ revisionQuestion:
 ---
 ## Content
 
-AI failures are not always loud.
+AI systems often fail in ways that look plausible at first glance.
 
-A system may return an answer that is confident, formatted correctly, and still wrong. Common failure modes include:
+For the support-summary feature, common failure modes include:
 
-- hallucinated facts;
-- missing context;
-- policy violations;
-- unsafe automation;
-- overconfident summaries;
+- hallucinated facts that were not in the ticket;
+- missing context from an earlier message;
+- overconfident summaries of ambiguous requests;
+- policy violations, such as promising a refund;
+- unsafe automation, such as closing a case without review;
 - unstable output across similar inputs.
 
-Guardrails reduce the blast radius when these failures appear.
+Guardrails are the controls around that behavior.
 
-Useful guardrails can include structured output, constrained inputs, retrieval limits, human review, fallback behavior, logging, monitoring, and escalation.
+Some guardrails constrain the input or output. Others change the workflow. A reliable system might require structured output, block policy-sensitive claims, route low-confidence cases to a human, log model inputs and outputs, monitor complaint patterns, or fall back to a shorter extractive summary when context is thin.
 
-The point is not to wrap every AI feature in every control. The point is to choose controls that match the system's risk.
-
----
-## Practice
-
-A guardrail is most useful when it reduces the ??? of a likely or high-impact failure.
-
-- blast radius
-- font size
-- sprint count
-- prompt length
+The important point is that guardrails should match the risk. A typo in a low-stakes draft may need little control. A wrong summary that triggers a customer-facing action may need review, escalation, and auditability.
 
 ---
 ## Revision
 
-Human review, fallback behavior, logging, and escalation are examples of AI system ???.
+Guardrails should match the ??? of the AI system's failure.
 
-- guardrails
-- demos
-- tokens
-- benchmarks
+- risk
+- filename
+- sprint length

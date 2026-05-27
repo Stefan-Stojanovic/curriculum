@@ -1,14 +1,9 @@
 ---
-author: enki-ai
+author: Stefan-Stojanovic
 
 type: normal
 
 category: must-know
-
-practiceQuestion:
-  formats:
-    - fill-in-the-gap
-  context: standalone
 
 revisionQuestion:
   formats:
@@ -22,37 +17,26 @@ revisionQuestion:
 ---
 ## Content
 
-AI reliability is a system design problem, not a prompt cleverness contest.
+AI reliability is system design.
 
-When you add model behavior to a product, you usually trade among:
+For a support-summary feature, you are not only choosing "which model writes best." You are balancing several constraints:
 
-- **capability**: can the model handle the task?
-- **cost**: what does each call add at expected volume?
-- **latency**: can users or downstream systems wait?
-- **variance**: how stable is output across similar inputs?
-- **review effort**: who checks uncertain or high-impact output?
-- **failure impact**: what happens when the output is wrong?
+- **Capability:** Can the system handle the real task, including messy inputs?
+- **Cost:** Can you afford the model, retrieval, retries, and review flow at expected volume?
+- **Latency:** Will users wait for the result, or does the workflow need a faster fallback?
+- **Variance:** How much can the output change across similar inputs?
+- **Review effort:** Which cases need human inspection before the output is used?
+- **Failure impact:** What happens if the system is wrong, incomplete, or overconfident?
 
-A stronger model might reduce missed details but increase cost and latency. A cheaper model might be fine for internal drafts but risky for customer-visible decisions. Human review can improve quality but slow the workflow.
+These tradeoffs push against each other. A stronger model may cost more. A cheaper model may need more review. A stricter guardrail may reduce risk but increase fallbacks. A faster response may skip context that would have prevented a bad answer.
 
-The engineering move is to match the control level to the consequence of failure.
-
----
-## Practice
-
-For AI systems, a larger model may improve capability while increasing cost and ???.
-
-- latency
-- determinism
-- file size
-- syntax
+Engineering the system means choosing the tradeoffs deliberately, then making them visible enough to test and operate.
 
 ---
 ## Revision
 
-Review effort, fallback behavior, and escalation should increase when the failure impact is ???.
+Choosing an AI design means balancing capability, cost, latency, variance, review effort, and ???.
 
-- higher
-- prettier
-- hidden
-- random
+- failure impact
+- brand color
+- repository name

@@ -1,14 +1,9 @@
 ---
-author: enki-ai
+author: Stefan-Stojanovic
 
 type: normal
 
 category: must-know
-
-practiceQuestion:
-  formats:
-    - fill-in-the-gap
-  context: standalone
 
 revisionQuestion:
   formats:
@@ -22,38 +17,26 @@ revisionQuestion:
 ---
 ## Content
 
-Reliable AI systems depend on more than model access.
+Reliable AI work starts before the first production request.
 
-You will learn how engineers reason about:
+You will learn how engineering choices shape system behavior:
 
-- **specs**: what the AI should produce, avoid, and expose;
-- **model choice**: capability, cost, latency, variance, and operational fit;
-- **evals**: evidence that behavior is good enough for the use case;
-- **guardrails**: limits, review gates, fallbacks, and escalation paths;
-- **observability**: logs, traces, quality signals, and incident clues.
+- **Model choice** affects capability, cost, latency, data handling, and failure risk.
+- **Specs** turn "the answer looks good" into observable acceptance criteria.
+- **Evals** help you compare behavior across realistic cases, not just a favorite demo.
+- **Review gates** decide when automation can proceed and when a person must inspect the output.
+- **Guardrails** constrain risky behavior, trigger fallbacks, and reduce blast radius.
+- **Observability** helps you notice drift, edge cases, bad inputs, and expensive paths.
 
-The recurring question is practical:
+The course will not treat AI reliability as prompt cleverness. Prompts matter, but production behavior also depends on retrieval, input constraints, output validation, user experience, deployment choices, monitoring, and incident response.
 
-> What evidence would make this AI behavior safe enough for this job?
-
-That answer changes by system. A draft email, a fraud alert, a support summary, and an automated refund do not need the same quality bar.
-
----
-## Practice
-
-A reliable AI feature needs a clear ??? before a team can decide whether the output is good enough.
-
-- quality bar
-- launch party
-- brand voice
-- model rumor
+By the end, you should be able to look at an AI feature and ask better engineering questions: What should it do? How will we know? What happens when it is wrong? Who or what catches the error?
 
 ---
 ## Revision
 
-Specs, evals, guardrails, and observability help engineers judge AI behavior before and after ???.
+A good AI system spec should define acceptable behavior and ??? for deciding whether output is good enough.
 
-- shipping
-- naming
-- installing
-- mocking
+- evidence
+- enthusiasm
+- novelty

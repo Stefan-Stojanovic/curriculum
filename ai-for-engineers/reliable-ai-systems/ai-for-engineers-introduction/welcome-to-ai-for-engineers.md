@@ -1,5 +1,5 @@
 ---
-author: enki-ai
+author: Stefan-Stojanovic
 
 type: normal
 
@@ -12,30 +12,33 @@ revisionQuestion:
 
 ---
 
-# Welcome To AI For Engineers
+# Welcome to AI For Engineers
 
 ---
 ## Content
 
-Welcome to AI For Engineers.
+AI For Engineers is about building and operating AI-powered systems, not just using AI tools.
 
-This course is about building and operating AI-powered systems as production systems. That means looking past an impressive demo and asking engineering questions:
+In normal software, a function should usually return the same output for the same input. With generative AI, the behavior can vary. The model may handle an ambiguous request well, miss context, invent a detail, or respond differently after a small input change.
 
-- What behavior are we promising?
-- What does failure look like?
-- How will we measure quality?
-- What should be reviewed, logged, limited, or escalated?
+That does not make AI unusable. It means reliability has to be designed around the model instead of assumed from the code path.
 
-AI can make products more capable because it handles language, ambiguity, and messy inputs. The same flexibility also makes behavior less predictable than normal deterministic code.
+In this course, you will practice thinking about AI features as production systems with:
 
-In this topic, you will practice treating AI as a powerful but fallible system component.
+- clear specs for acceptable output;
+- evals that measure behavior before release;
+- cost and latency constraints;
+- guardrails for risky cases;
+- logs, monitoring, and escalation paths;
+- human review where automation should not act alone.
+
+The goal is practical judgment: know what AI can safely do, what evidence you need before shipping, and where the system should slow down or ask for help.
 
 ---
 ## Revision
 
-AI For Engineers is about building and operating AI-powered systems as ??? systems.
+AI-powered systems need different reliability habits because model behavior can be ???, not fully deterministic.
 
-- production
-- decorative
-- temporary
-- isolated
+- probabilistic
+- compiled
+- cached

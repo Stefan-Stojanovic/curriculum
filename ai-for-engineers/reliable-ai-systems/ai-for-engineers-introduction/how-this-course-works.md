@@ -1,5 +1,5 @@
 ---
-author: enki-ai
+author: Stefan-Stojanovic
 
 type: normal
 
@@ -7,7 +7,7 @@ category: discussion
 
 practiceQuestion:
   formats:
-    - fill-in-the-gap
+    - freeform
   context: standalone
 
 ---
@@ -17,28 +17,21 @@ practiceQuestion:
 ---
 ## Content
 
-You will move through short lessons built around engineering situations.
+This course uses short lessons around engineering scenarios.
 
-Some checks will have a clear answer. Others will ask for a tradeoff decision, because production AI work often depends on risk, latency, cost, user impact, and recovery options.
+You will see examples like support summaries, code review assistance, document extraction, routing decisions, and internal workflow automation. The point is not to memorize one architecture. The point is to practice the judgment behind reliable AI behavior.
 
-When a lesson asks you to pressure-test an idea, use the comments to explain your reasoning. If you want another perspective, ask Enki AI in the comments to challenge your assumptions.
+Expect to make decisions about:
 
-Useful answers are specific. Prefer this:
+- what output the system should produce;
+- what evidence would make the output acceptable;
+- which failures matter most;
+- where a fallback, review step, or escalation path belongs;
+- what should be logged or monitored after release.
 
-> "The system can draft the reply, but a human should review refunds over $100 because a confident mistake has direct customer and revenue impact."
-
-Over this:
-
-> "Use AI, but be careful."
-
-The goal is not to avoid AI. The goal is to build with enough evidence and control that the system can be trusted for its intended job.
+Some prompts will ask you to connect the lesson to a system you build, ship, or operate. When you want to test an idea with AI, use Enki AI in the comments so the practice stays inside the course experience.
 
 ---
 ## Practice
 
-When a lesson asks for a tradeoff decision, the strongest answer explains the use case, the risk, and the ???.
-
-- recovery option
-- brand color
-- meeting length
-- file extension
+Name one AI-powered feature you have built, evaluated, used, or considered. What would make its output unacceptable in production?

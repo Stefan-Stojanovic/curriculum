@@ -1,5 +1,5 @@
 ---
-author: enki-ai
+author: Stefan-Stojanovic
 
 type: normal
 
@@ -9,7 +9,6 @@ practiceQuestion:
   formats:
     - fill-in-the-gap
   context: standalone
-
 revisionQuestion:
   formats:
     - fill-in-the-gap
@@ -22,43 +21,36 @@ revisionQuestion:
 ---
 ## Content
 
-A demo asks:
+"It worked on my example" is not an eval.
 
-> Can this work once?
+Before shipping the support-summary feature, you need acceptance criteria. For example:
 
-An eval asks:
+- The summary names the correct customer problem.
+- It does not invent commitments, refunds, outages, or policy exceptions.
+- It separates known facts from suggested next steps.
+- It flags low-context tickets for review instead of guessing.
+- It stays within a useful length for the support workflow.
 
-> Does this work well enough on the cases we expect, including the cases most likely to hurt us?
+Then you need test cases that reflect production, not only clean demos. Include short tickets, long tickets, contradictory messages, missing context, angry users, noisy logs, and cases where the correct behavior is to refuse a confident summary.
 
-Before shipping an AI feature, define the evidence you need. For a support-summary system, that might include:
+An eval does not prove the system will never fail. It gives you evidence about known risks before users depend on the output.
 
-- sample tickets from real traffic;
-- expected summaries for common and difficult cases;
-- checks for invented facts;
-- checks for missing critical details;
-- thresholds for acceptable quality;
-- examples that must trigger review or fallback.
-
-Evals do not make AI perfectly predictable. They make the risk visible enough for engineering judgment.
-
-Without evals, teams argue from anecdotes: one impressive demo, one embarrassing failure, or whichever example someone saw last.
+That evidence helps you decide whether to ship, change the prompt, use a different model, add retrieval, require review, or narrow the feature scope.
 
 ---
 ## Practice
 
-An eval helps a team move from "it worked on my example" to "we have ??? that it is good enough."
+An eval should test realistic cases against clear ???.
 
-- evidence
-- excitement
-- access
-- permission
+- acceptance criteria
+- release dates
+- model rumors
 
 ---
 ## Revision
 
-Evals should include expected cases and risky cases, not only the clean examples used in a ???.
+The main difference between a demo and an eval is that an eval uses realistic cases and predefined ???.
 
-- demo
-- database
-- cache
-- sprint
+- success criteria
+- marketing copy
+- variable names

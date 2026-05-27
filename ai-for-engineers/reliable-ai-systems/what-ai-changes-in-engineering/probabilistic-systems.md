@@ -1,5 +1,5 @@
 ---
-author: enki-ai
+author: Stefan-Stojanovic
 
 type: normal
 
@@ -9,7 +9,6 @@ practiceQuestion:
   formats:
     - fill-in-the-gap
   context: standalone
-
 revisionQuestion:
   formats:
     - fill-in-the-gap
@@ -22,39 +21,34 @@ revisionQuestion:
 ---
 ## Content
 
-A support-summary feature looks great in a demo.
+Imagine a support-summary feature.
 
-The input is a clean ticket. The model returns three accurate bullet points. The team can immediately see the value: agents read faster, handoffs improve, and managers get cleaner context.
+In a demo, it looks strong. A long customer thread goes in. The model returns a short summary with the customer's issue, the attempted fixes, and a suggested next step.
 
-Then production traffic arrives:
+Then production traffic arrives.
 
-- pasted email threads;
-- missing order IDs;
-- angry customers;
-- internal abbreviations;
-- screenshots the model cannot inspect;
-- tickets that mix two unrelated issues.
+Users paste messy logs, partial conversations, screenshots transcribed badly, angry messages, old ticket history, and private notes. Most summaries may still be useful. One confident wrong summary, though, can send support down the wrong path or misstate what the customer was promised.
 
-The model may still produce a fluent summary. That is the hard part: fluent output can look reliable even when it misses context or invents a detail.
+That is the shift AI brings into engineering: useful behavior with variable output.
 
-AI changes engineering because behavior is often probabilistic. Similar inputs can produce different outputs, and messy inputs can expose failures the demo never touched.
+Traditional code can still fail, but its behavior is usually bounded by explicit branches. AI behavior depends on inputs, model behavior, context quality, prompt design, retrieval, and sampling. Similar inputs can produce different wording, different emphasis, or different mistakes.
+
+You do not solve this by hoping the model is smart enough. You engineer the surrounding system so variable behavior has limits, evidence, and recovery paths.
 
 ---
 ## Practice
 
-AI-powered features can be valuable because they handle messy inputs, but their behavior is often ??? rather than fully deterministic.
+An AI support-summary feature can be useful in production, but engineers must account for ??? output.
 
-- probabilistic
+- variable
 - compiled
 - encrypted
-- static
 
 ---
 ## Revision
 
-A successful AI demo proves that the behavior can work on one example. It does not prove that the behavior is ???.
+A polished AI demo is not enough evidence for production because real inputs are more ??? than demo inputs.
 
-- production-ready
-- impossible
-- free
+- varied
+- scripted
 - deterministic

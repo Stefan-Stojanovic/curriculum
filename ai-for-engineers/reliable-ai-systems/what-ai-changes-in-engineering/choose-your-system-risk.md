@@ -1,5 +1,5 @@
 ---
-author: enki-ai
+author: Stefan-Stojanovic
 
 type: normal
 
@@ -7,12 +7,11 @@ category: discussion
 
 practiceQuestion:
   formats:
-    - fill-in-the-gap
+    - freeform
   context: standalone
-
 revisionQuestion:
   formats:
-    - fill-in-the-gap
+    - freeform
   context: standalone
 
 ---
@@ -22,43 +21,32 @@ revisionQuestion:
 ---
 ## Content
 
-Pick one AI-powered feature or workflow you might ship, review, or operate.
+Now connect the mental model to a real feature.
 
-Use this structure:
+Pick one AI-powered workflow you might build, ship, buy, or operate. It could summarize support tickets, classify incidents, draft release notes, extract fields from contracts, rank alerts, review code, or route internal requests.
 
-- **Intended output**: what should the AI produce?
-- **Failure**: what wrong output would matter?
-- **Evidence**: what would prove the behavior is good enough?
-- **Review or fallback trigger**: when should the system stop, escalate, or ask a human?
+For that workflow, identify:
 
-For example:
+- the intended output;
+- what could go wrong;
+- what evidence would show the output is good enough;
+- what should trigger human review, fallback behavior, or escalation.
 
-> Intended output: summarize support tickets for agents.
->
-> Failure: omit a billing dispute or invent a refund promise.
->
-> Evidence: evals pass on real ticket samples, including angry customers and multi-issue threads.
->
-> Review or fallback trigger: route summaries to human review when the ticket mentions refunds, legal threats, or account closure.
+If you want to pressure-test your answer, use Enki AI in the comments. Ask it what failure mode you may be missing, then decide whether the suggestion is relevant to your system.
 
-If you want help pressure-testing your answer, ask Enki AI in the comments to challenge the risk and suggest one missing guardrail.
+The useful habit is not "trust AI" or "avoid AI." It is to define the behavior you need, test it against real risk, and build controls before the output matters.
 
 ---
 ## Practice
 
-For a production AI feature, the review or fallback trigger should be based on the feature's ???.
+Choose one AI-powered feature or workflow. Write one sentence for each:
 
-- risk
-- name
-- color
-- popularity
+- Intended output:
+- What could go wrong:
+- Evidence it is good enough:
+- Review, fallback, or escalation trigger:
 
 ---
 ## Revision
 
-Before shipping an AI-powered workflow, engineers should define intended output, failure, evidence, and a review or ??? trigger.
-
-- fallback
-- marketing
-- install
-- hiring
+Think of an AI feature you might ship or operate. What is one condition that should trigger human review or fallback?
