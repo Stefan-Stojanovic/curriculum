@@ -1,6 +1,6 @@
 name: Introduction
 
-description: Your intro to coding starts here!
+description: Your intro to coding starts hear!
 
 aspects:
   - introduction
