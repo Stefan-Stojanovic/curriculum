@@ -1,11 +1,15 @@
 ---
 author: Stefan-Stojanovic
+
 type: normal
+
 category: must-know
+
 revisionQuestion:
   formats:
     - fill-in-the-gap
   context: standalone
+
 ---
 
 # What You Will Learn
@@ -13,28 +17,28 @@ revisionQuestion:
 ---
 ## Content
 
-Reliable AI work starts before the model call and continues after launch.
+AI engineering is not only about picking a model or writing a clever prompt. Those choices matter, but they sit inside a larger system.
 
-Before shipping, engineers need to decide what the system should do, how good the output must be, what evidence is enough, and what should happen when confidence is low. After shipping, they need to watch whether real inputs still match the assumptions used during testing.
+Across this course, you will learn how to reason about:
 
-This course will help you reason about decisions like:
+- **specs**: what the AI feature should produce, refuse, or escalate
+- **model choice**: how capability, cost, latency, and risk change by model
+- **evals**: how to test behavior on representative cases before shipping
+- **review gates**: when a human, policy, or deterministic check should block an output
+- **observability**: what to log and monitor when behavior changes after release
+- **guardrails**: constraints, fallbacks, and escalation paths that limit damage
 
-- which model is good enough for the job, given capability, cost, latency, and risk;
-- what output contract the system should enforce;
-- which examples belong in an eval set before release;
-- when a human should review, approve, or take over;
-- what logs, metrics, or alerts would reveal quality drift;
-- which failures are acceptable and which need escalation.
+You will also practice deciding where AI belongs in a workflow.
 
-You will not need to memorize a single "right" architecture. AI systems depend too much on the task, user, risk level, and operating environment for that.
+Some AI behavior can be fully automated because the impact is low and errors are easy to catch. Some should draft or rank options while a person decides. Some should stay behind a review gate until the team has better data, controls, or tolerance for failure.
 
-Instead, you will build a practical judgment loop: specify the behavior, test it against realistic cases, constrain the risky parts, monitor what changes, and keep humans in the places where judgment still matters.
+Good AI engineering is not blind optimism or blanket rejection. It is matching the system design to the job, evidence, and consequences.
 
 ---
 ## Revision
 
-A reliable AI workflow should define the behavior, test it against realistic cases, constrain risky parts, and ??? what changes after launch.
+An AI eval helps a team test behavior on ??? cases before shipping.
 
-- monitor
-- ignore
-- hide
+- representative
+- random
+- perfect

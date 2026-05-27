@@ -1,7 +1,6 @@
 name: What AI Changes In Engineering
 description: Learn why AI systems need specs, evals, guardrails, and review before production use.
 aspects:
-  - introduction
   - workout
 insights:
   - probabilistic-systems

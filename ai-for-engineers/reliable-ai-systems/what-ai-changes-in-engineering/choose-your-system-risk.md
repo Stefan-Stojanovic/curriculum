@@ -1,15 +1,20 @@
 ---
 author: Stefan-Stojanovic
+
 type: normal
+
 category: discussion
+
 practiceQuestion:
   formats:
     - fill-in-the-gap
   context: standalone
+
 revisionQuestion:
   formats:
     - fill-in-the-gap
   context: standalone
+
 ---
 
 # Choose Your System Risk
@@ -17,49 +22,53 @@ revisionQuestion:
 ---
 ## Content
 
-Pick one AI-powered feature or workflow you might build, review, or operate.
+Now apply the reliability frame to a system you might build, ship, or operate.
 
-It does not need to be ambitious. A useful example could be:
+Pick one AI-powered feature or workflow. It can be real or hypothetical:
 
-- summarizing customer tickets;
-- classifying inbound support requests;
-- drafting release notes from merged pull requests;
-- extracting fields from invoices;
-- suggesting incident-response next steps.
+- summarizing support tickets
+- drafting incident updates
+- ranking search results
+- triaging security alerts
+- extracting fields from contracts
+- suggesting code changes
+- reviewing policy-sensitive content
 
-Now write a short risk brief for that system:
+Write down four things:
 
-1. **Intended output:** What should the AI produce?
-2. **Likely failure:** What could go wrong in a way that matters?
-3. **Evidence of quality:** What eval, sample, or acceptance criteria would show it is good enough?
-4. **Review or fallback trigger:** When should a human review, the system refuse, or a safer path take over?
+1. The intended output
+2. What could go wrong
+3. What evidence would show it is good enough
+4. Who is affected when it is wrong
+5. What should trigger review, fallback, or escalation
 
 For example:
 
-> Intended output: summarize a support ticket for the next agent.
->
-> Likely failure: the summary invents a promise the company never made.
->
-> Evidence of quality: eval cases with messy notes, conflicting details, and expected summaries checked against source text.
->
-> Review or fallback trigger: any billing, legal, account-deletion, or conflicting-source case requires human review.
+> Feature: customer-escalation summary  
+> Intended output: a short summary for the on-call engineer  
+> Risk: it invents a root cause  
+> Evidence: eval cases with known source facts pass the no-invention check  
+> Impact: the wrong team may investigate the wrong issue  
+> Review trigger: billing, legal, angry customer, missing source context, or high-severity incident
 
-If you want to pressure-test your brief, post it in the comments and ask Enki AI what risk or guardrail you may be missing.
+This is a small version of the engineering habit behind reliable AI systems: define the job, name the failure, gather evidence, and choose controls that match the impact.
+
+If you want to stress-test your answer, post it in the comments and ask Enki AI which failure mode or guardrail you may be underestimating.
 
 ---
 ## Practice
 
-For an AI feature, the review or fallback trigger should describe when a human reviews, the system refuses, or a safer path ???.
+For your chosen AI feature, a useful risk sketch should include output, failure risk, evidence, affected owner or user, and review or fallback ???.
 
-- takes over
-- disappears
-- rewrites history
+- trigger
+- color
+- title
 
 ---
 ## Revision
 
-Before shipping an AI-powered workflow, name the intended output, likely failure, evidence of quality, and review or ??? trigger.
+Reliable AI design starts by defining the job, naming the failure, gathering evidence, and choosing ??? that match the impact.
 
-- fallback
-- decoration
-- marketing
+- controls
+- colors
+- slogans

@@ -1,11 +1,15 @@
 ---
 author: Stefan-Stojanovic
+
 type: normal
+
 category: must-know
+
 revisionQuestion:
   formats:
     - fill-in-the-gap
   context: standalone
+
 ---
 
 # Probabilistic Systems
@@ -13,34 +17,31 @@ revisionQuestion:
 ---
 ## Content
 
-Imagine a support-summary feature.
+Imagine your team demos a customer-escalation summary feature.
 
-In a demo, it looks strong. You paste five clean tickets. The model identifies the customer issue, summarizes the recent history, and suggests a reasonable next step. The team can immediately see the value.
+A customer writes a long, messy ticket thread. The AI produces a short escalation summary for the engineer who may need to investigate. In the demo, it works well: the summary is readable, the tone is professional, and the important details are present.
 
-Production inputs are not that clean.
+That demo is useful evidence, but it is not enough evidence to ship.
 
-Users paste partial notes. One ticket contains two unrelated problems. Account data is stale. A customer writes in a style your test examples did not cover. A support agent adds an internal shortcut that the model interprets literally.
+Production inputs are messier:
 
-The feature may still be worth building. But the engineering problem has changed.
+- users paste partial logs, screenshots, quoted emails, and angry follow-ups
+- tickets mix billing, technical, account, and deployment details
+- the source conversation may contain false assumptions from the customer
+- the model may confidently summarize something that was never confirmed
+- one bad summary can send the on-call engineer down the wrong path
 
-With deterministic code, you can often reason from a rule to an expected output. With AI behavior, you also need to reason from a distribution of possible outputs to an acceptable operating range. The system might be right often, wrong confidently, or useful only when the input stays inside a known boundary.
+This is the key shift: an AI feature can be impressive and still be probabilistic.
 
-That is the core shift: a promising demo is evidence, but it is not production readiness.
+Probabilistic means the behavior is based on learned patterns and context, not a fixed rule for every possible input. Similar inputs can produce slightly different outputs. Unusual inputs can produce confident mistakes.
 
-Production readiness needs a clearer answer to questions like:
-
-- Which inputs are in scope?
-- What does a good output have to include or avoid?
-- How often can the system be wrong before the feature becomes unsafe or too expensive?
-- What happens when the model produces a plausible but harmful answer?
-
-AI changes engineering because behavior quality becomes something you measure, constrain, and monitor. You do not just call a model. You design the system around the model's variance.
+Engineers do not solve this by hoping the prompt is good enough. They design the surrounding system: specs, evals, constraints, fallback behavior, review, logging, and monitoring.
 
 ---
 ## Revision
 
-A promising AI demo is useful evidence, but production readiness also requires measuring and constraining the model's ???.
+A customer-escalation summary demo is not enough to ship because production inputs are messier and AI behavior is ???.
 
-- variance
-- file size
-- brand color
+- probabilistic
+- compiled
+- encrypted
