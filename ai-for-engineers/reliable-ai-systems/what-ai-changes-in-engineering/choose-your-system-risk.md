@@ -1,19 +1,15 @@
 ---
 author: Stefan-Stojanovic
-
 type: normal
-
 category: discussion
-
 practiceQuestion:
   formats:
-    - freeform
+    - fill-in-the-gap
   context: standalone
 revisionQuestion:
   formats:
-    - freeform
+    - fill-in-the-gap
   context: standalone
-
 ---
 
 # Choose Your System Risk
@@ -21,32 +17,49 @@ revisionQuestion:
 ---
 ## Content
 
-Now connect the mental model to a real feature.
+Pick one AI-powered feature or workflow you might build, review, or operate.
 
-Pick one AI-powered workflow you might build, ship, buy, or operate. It could summarize support tickets, classify incidents, draft release notes, extract fields from contracts, rank alerts, review code, or route internal requests.
+It does not need to be ambitious. A useful example could be:
 
-For that workflow, identify:
+- summarizing customer tickets;
+- classifying inbound support requests;
+- drafting release notes from merged pull requests;
+- extracting fields from invoices;
+- suggesting incident-response next steps.
 
-- the intended output;
-- what could go wrong;
-- what evidence would show the output is good enough;
-- what should trigger human review, fallback behavior, or escalation.
+Now write a short risk brief for that system:
 
-If you want to pressure-test your answer, use Enki AI in the comments. Ask it what failure mode you may be missing, then decide whether the suggestion is relevant to your system.
+1. **Intended output:** What should the AI produce?
+2. **Likely failure:** What could go wrong in a way that matters?
+3. **Evidence of quality:** What eval, sample, or acceptance criteria would show it is good enough?
+4. **Review or fallback trigger:** When should a human review, the system refuse, or a safer path take over?
 
-The useful habit is not "trust AI" or "avoid AI." It is to define the behavior you need, test it against real risk, and build controls before the output matters.
+For example:
+
+> Intended output: summarize a support ticket for the next agent.
+>
+> Likely failure: the summary invents a promise the company never made.
+>
+> Evidence of quality: eval cases with messy notes, conflicting details, and expected summaries checked against source text.
+>
+> Review or fallback trigger: any billing, legal, account-deletion, or conflicting-source case requires human review.
+
+If you want to pressure-test your brief, post it in the comments and ask Enki AI what risk or guardrail you may be missing.
 
 ---
 ## Practice
 
-Choose one AI-powered feature or workflow. Write one sentence for each:
+For an AI feature, the review or fallback trigger should describe when a human reviews, the system refuses, or a safer path ???.
 
-- Intended output:
-- What could go wrong:
-- Evidence it is good enough:
-- Review, fallback, or escalation trigger:
+- takes over
+- disappears
+- rewrites history
 
 ---
 ## Revision
 
-Think of an AI feature you might ship or operate. What is one condition that should trigger human review or fallback?
+Before shipping an AI-powered workflow, name the intended output, likely failure, evidence of quality, and review or ??? trigger.
+
+- fallback
+- decoration
+- marketing

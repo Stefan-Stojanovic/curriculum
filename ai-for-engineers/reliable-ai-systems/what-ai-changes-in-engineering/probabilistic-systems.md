@@ -1,19 +1,11 @@
 ---
 author: Stefan-Stojanovic
-
 type: normal
-
 category: must-know
-
-practiceQuestion:
-  formats:
-    - fill-in-the-gap
-  context: standalone
 revisionQuestion:
   formats:
     - fill-in-the-gap
   context: standalone
-
 ---
 
 # Probabilistic Systems
@@ -23,32 +15,32 @@ revisionQuestion:
 
 Imagine a support-summary feature.
 
-In a demo, it looks strong. A long customer thread goes in. The model returns a short summary with the customer's issue, the attempted fixes, and a suggested next step.
+In a demo, it looks strong. You paste five clean tickets. The model identifies the customer issue, summarizes the recent history, and suggests a reasonable next step. The team can immediately see the value.
 
-Then production traffic arrives.
+Production inputs are not that clean.
 
-Users paste messy logs, partial conversations, screenshots transcribed badly, angry messages, old ticket history, and private notes. Most summaries may still be useful. One confident wrong summary, though, can send support down the wrong path or misstate what the customer was promised.
+Users paste partial notes. One ticket contains two unrelated problems. Account data is stale. A customer writes in a style your test examples did not cover. A support agent adds an internal shortcut that the model interprets literally.
 
-That is the shift AI brings into engineering: useful behavior with variable output.
+The feature may still be worth building. But the engineering problem has changed.
 
-Traditional code can still fail, but its behavior is usually bounded by explicit branches. AI behavior depends on inputs, model behavior, context quality, prompt design, retrieval, and sampling. Similar inputs can produce different wording, different emphasis, or different mistakes.
+With deterministic code, you can often reason from a rule to an expected output. With AI behavior, you also need to reason from a distribution of possible outputs to an acceptable operating range. The system might be right often, wrong confidently, or useful only when the input stays inside a known boundary.
 
-You do not solve this by hoping the model is smart enough. You engineer the surrounding system so variable behavior has limits, evidence, and recovery paths.
+That is the core shift: a promising demo is evidence, but it is not production readiness.
 
----
-## Practice
+Production readiness needs a clearer answer to questions like:
 
-An AI support-summary feature can be useful in production, but engineers must account for ??? output.
+- Which inputs are in scope?
+- What does a good output have to include or avoid?
+- How often can the system be wrong before the feature becomes unsafe or too expensive?
+- What happens when the model produces a plausible but harmful answer?
 
-- variable
-- compiled
-- encrypted
+AI changes engineering because behavior quality becomes something you measure, constrain, and monitor. You do not just call a model. You design the system around the model's variance.
 
 ---
 ## Revision
 
-A polished AI demo is not enough evidence for production because real inputs are more ??? than demo inputs.
+A promising AI demo is useful evidence, but production readiness also requires measuring and constraining the model's ???.
 
-- varied
-- scripted
-- deterministic
+- variance
+- file size
+- brand color

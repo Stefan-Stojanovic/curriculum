@@ -1,15 +1,7 @@
 ---
 author: Stefan-Stojanovic
-
 type: normal
-
 category: discussion
-
-practiceQuestion:
-  formats:
-    - freeform
-  context: standalone
-
 ---
 
 # How This Course Works
@@ -17,21 +9,19 @@ practiceQuestion:
 ---
 ## Content
 
-This course uses short lessons around engineering scenarios.
+Each workout is short and practical. You will see engineering scenarios, compare tradeoffs, and make small decisions about AI behavior.
 
-You will see examples like support summaries, code review assistance, document extraction, routing decisions, and internal workflow automation. The point is not to memorize one architecture. The point is to practice the judgment behind reliable AI behavior.
+Expect questions like:
 
-Expect to make decisions about:
+- What is the system allowed to do automatically?
+- What output would be unacceptable?
+- What examples would prove this works beyond a demo?
+- What should happen when the model is unsure, slow, expensive, or wrong?
 
-- what output the system should produce;
-- what evidence would make the output acceptable;
-- which failures matter most;
-- where a fallback, review step, or escalation path belongs;
-- what should be logged or monitored after release.
+Some insights will ask you to connect the lesson to a system you build, review, or operate. When you want to pressure-test an idea, use Enki AI in the comments to turn your rough answer into a sharper engineering question.
 
-Some prompts will ask you to connect the lesson to a system you build, ship, or operate. When you want to test an idea with AI, use Enki AI in the comments so the practice stays inside the course experience.
+For example, you might comment with:
 
----
-## Practice
+> I am considering an AI feature that summarizes incident reports. What failure modes should I test before letting this summary reach customers?
 
-Name one AI-powered feature you have built, evaluated, used, or considered. What would make its output unacceptable in production?
+You do not need a perfect system design before moving on. The useful habit is to name the risk, define the evidence, and decide what control belongs around the AI behavior.

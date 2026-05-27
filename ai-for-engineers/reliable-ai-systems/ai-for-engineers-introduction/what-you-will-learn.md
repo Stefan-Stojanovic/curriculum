@@ -1,15 +1,11 @@
 ---
 author: Stefan-Stojanovic
-
 type: normal
-
 category: must-know
-
 revisionQuestion:
   formats:
     - fill-in-the-gap
   context: standalone
-
 ---
 
 # What You Will Learn
@@ -17,26 +13,28 @@ revisionQuestion:
 ---
 ## Content
 
-Reliable AI work starts before the first production request.
+Reliable AI work starts before the model call and continues after launch.
 
-You will learn how engineering choices shape system behavior:
+Before shipping, engineers need to decide what the system should do, how good the output must be, what evidence is enough, and what should happen when confidence is low. After shipping, they need to watch whether real inputs still match the assumptions used during testing.
 
-- **Model choice** affects capability, cost, latency, data handling, and failure risk.
-- **Specs** turn "the answer looks good" into observable acceptance criteria.
-- **Evals** help you compare behavior across realistic cases, not just a favorite demo.
-- **Review gates** decide when automation can proceed and when a person must inspect the output.
-- **Guardrails** constrain risky behavior, trigger fallbacks, and reduce blast radius.
-- **Observability** helps you notice drift, edge cases, bad inputs, and expensive paths.
+This course will help you reason about decisions like:
 
-The course will not treat AI reliability as prompt cleverness. Prompts matter, but production behavior also depends on retrieval, input constraints, output validation, user experience, deployment choices, monitoring, and incident response.
+- which model is good enough for the job, given capability, cost, latency, and risk;
+- what output contract the system should enforce;
+- which examples belong in an eval set before release;
+- when a human should review, approve, or take over;
+- what logs, metrics, or alerts would reveal quality drift;
+- which failures are acceptable and which need escalation.
 
-By the end, you should be able to look at an AI feature and ask better engineering questions: What should it do? How will we know? What happens when it is wrong? Who or what catches the error?
+You will not need to memorize a single "right" architecture. AI systems depend too much on the task, user, risk level, and operating environment for that.
+
+Instead, you will build a practical judgment loop: specify the behavior, test it against realistic cases, constrain the risky parts, monitor what changes, and keep humans in the places where judgment still matters.
 
 ---
 ## Revision
 
-A good AI system spec should define acceptable behavior and ??? for deciding whether output is good enough.
+A reliable AI workflow should define the behavior, test it against realistic cases, constrain risky parts, and ??? what changes after launch.
 
-- evidence
-- enthusiasm
-- novelty
+- monitor
+- ignore
+- hide

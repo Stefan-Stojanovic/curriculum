@@ -1,15 +1,11 @@
 ---
 author: Stefan-Stojanovic
-
 type: normal
-
 category: caveat
-
 revisionQuestion:
   formats:
     - fill-in-the-gap
   context: standalone
-
 ---
 
 # Failure Modes And Guardrails
@@ -17,28 +13,34 @@ revisionQuestion:
 ---
 ## Content
 
-AI systems often fail in ways that look plausible at first glance.
+AI failures are often plausible.
 
-For the support-summary feature, common failure modes include:
+That is what makes them operationally dangerous. A bad output might not crash. It might look polished, fit the expected format, and still be wrong in a way that matters.
 
-- hallucinated facts that were not in the ticket;
-- missing context from an earlier message;
-- overconfident summaries of ambiguous requests;
-- policy violations, such as promising a refund;
-- unsafe automation, such as closing a case without review;
-- unstable output across similar inputs.
+Common failure modes include:
 
-Guardrails are the controls around that behavior.
+- **Hallucinated facts:** The model invents details that were not in the source.
+- **Missing context:** The model ignores a constraint, policy, permission, or recent change.
+- **Policy violations:** The output recommends something the product should not allow.
+- **Unsafe automation:** The system takes an action that should require approval.
+- **Overconfident summaries:** The model hides uncertainty behind fluent language.
+- **Unstable output:** Similar inputs produce materially different answers.
 
-Some guardrails constrain the input or output. Others change the workflow. A reliable system might require structured output, block policy-sensitive claims, route low-confidence cases to a human, log model inputs and outputs, monitor complaint patterns, or fall back to a shorter extractive summary when context is thin.
+Guardrails are controls that reduce the chance or impact of those failures.
 
-The important point is that guardrails should match the risk. A typo in a low-stakes draft may need little control. A wrong summary that triggers a customer-facing action may need review, escalation, and auditability.
+Some guardrails constrain what the model can produce, such as a strict output schema or a requirement to cite source fields. Some guardrails constrain what the system can do, such as blocking automatic action above a risk threshold. Others help operators notice problems, such as logs, monitoring, sampling, alerts, and escalation paths.
+
+For the support-summary feature, a reasonable guardrail might be:
+
+> If the ticket mentions billing, legal risk, account deletion, or conflicting source notes, the summary can draft internal notes but cannot send a customer-facing response without human review.
+
+The point is not to eliminate all risk. The point is to make risky behavior visible, bounded, and recoverable.
 
 ---
 ## Revision
 
-Guardrails should match the ??? of the AI system's failure.
+A guardrail should make risky AI behavior more visible, bounded, or ???.
 
-- risk
-- filename
-- sprint length
+- recoverable
+- invisible
+- surprising

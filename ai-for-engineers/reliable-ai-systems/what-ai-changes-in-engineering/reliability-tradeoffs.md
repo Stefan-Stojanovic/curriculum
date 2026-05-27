@@ -1,15 +1,11 @@
 ---
 author: Stefan-Stojanovic
-
 type: normal
-
 category: must-know
-
 revisionQuestion:
   formats:
     - fill-in-the-gap
   context: standalone
-
 ---
 
 # Reliability Tradeoffs
@@ -17,26 +13,34 @@ revisionQuestion:
 ---
 ## Content
 
-AI reliability is system design.
+AI reliability is a system-design problem.
 
-For a support-summary feature, you are not only choosing "which model writes best." You are balancing several constraints:
+The question is rarely "Can the model do this at all?" A better question is:
 
-- **Capability:** Can the system handle the real task, including messy inputs?
-- **Cost:** Can you afford the model, retrieval, retries, and review flow at expected volume?
-- **Latency:** Will users wait for the result, or does the workflow need a faster fallback?
-- **Variance:** How much can the output change across similar inputs?
-- **Review effort:** Which cases need human inspection before the output is used?
-- **Failure impact:** What happens if the system is wrong, incomplete, or overconfident?
+> Can this system do the job well enough, often enough, at the right cost and latency, with the right controls around failure?
 
-These tradeoffs push against each other. A stronger model may cost more. A cheaper model may need more review. A stricter guardrail may reduce risk but increase fallbacks. A faster response may skip context that would have prevented a bad answer.
+Engineers usually have to balance several constraints:
 
-Engineering the system means choosing the tradeoffs deliberately, then making them visible enough to test and operate.
+- **Capability:** Can the model handle the task and domain?
+- **Cost:** Can the product afford the number and size of calls needed?
+- **Latency:** Can users tolerate the response time?
+- **Variance:** How much does output quality change across similar inputs?
+- **Review effort:** Who checks the output, and how often?
+- **Failure impact:** What happens when the system is confidently wrong?
+
+These constraints push against each other.
+
+A stronger model might improve quality but raise cost and latency. A cheaper model might be acceptable if the output is low stakes or always reviewed. Full automation might be reasonable for drafting internal labels, but reckless for issuing refunds, changing permissions, or sending regulated advice.
+
+Prompt quality matters, but it is not the whole reliability story. You also need product boundaries, evals, fallback paths, rate limits, logging, monitoring, and humans where judgment is required.
+
+Treat the model as one component inside a larger control system. Reliability comes from the full design, not from hoping the model is clever enough every time.
 
 ---
 ## Revision
 
-Choosing an AI design means balancing capability, cost, latency, variance, review effort, and ???.
+AI reliability depends on the full system design, not only on the ???.
 
-- failure impact
-- brand color
-- repository name
+- prompt
+- folder name
+- button color

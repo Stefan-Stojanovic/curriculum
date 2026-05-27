@@ -1,44 +1,41 @@
 ---
 author: Stefan-Stojanovic
-
 type: normal
-
 category: must-know
-
 revisionQuestion:
   formats:
     - fill-in-the-gap
   context: standalone
-
 ---
 
-# Welcome to AI For Engineers
+# Welcome To AI For Engineers
 
 ---
 ## Content
 
-AI For Engineers is about building and operating AI-powered systems, not just using AI tools.
+Welcome to AI For Engineers.
 
-In normal software, a function should usually return the same output for the same input. With generative AI, the behavior can vary. The model may handle an ambiguous request well, miss context, invent a detail, or respond differently after a small input change.
+This course is about building and operating AI-powered systems, not collecting prompt tricks or chasing demos.
 
-That does not make AI unusable. It means reliability has to be designed around the model instead of assumed from the code path.
+An AI feature is still part of a software system. It has inputs, outputs, users, latency, cost, logs, failure modes, and production consequences. The difference is that part of its behavior is probabilistic: the same kind of request can produce different quality depending on context, model behavior, and messy real-world input.
 
-In this course, you will practice thinking about AI features as production systems with:
+That does not make AI unusable. It means engineers need different reliability habits around it.
 
-- clear specs for acceptable output;
-- evals that measure behavior before release;
-- cost and latency constraints;
-- guardrails for risky cases;
-- logs, monitoring, and escalation paths;
-- human review where automation should not act alone.
+In this course, you will practice thinking about:
 
-The goal is practical judgment: know what AI can safely do, what evidence you need before shipping, and where the system should slow down or ask for help.
+- specs for AI output;
+- evals and acceptance criteria;
+- model choice and operating constraints;
+- review gates, guardrails, and fallback behavior;
+- monitoring, escalation, and human judgment.
+
+The goal is not to make AI feel mysterious. The goal is to make AI behavior observable, testable, bounded, and useful enough to ship responsibly.
 
 ---
 ## Revision
 
-AI-powered systems need different reliability habits because model behavior can be ???, not fully deterministic.
+AI For Engineers is about treating AI-powered features as production systems with ??? behavior.
 
 - probabilistic
-- compiled
-- cached
+- decorative
+- deterministic-only
