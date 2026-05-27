@@ -1,11 +1,20 @@
 ---
 author: Stefan-Stojanovic
+
 type: normal
+
 category: must-know
+
 practiceQuestion:
   formats:
     - fill-in-the-gap
   context: standalone
+
+revisionQuestion:
+  formats:
+    - fill-in-the-gap
+  context: standalone
+
 ---
 
 # Evaluation Before Shipping
@@ -13,39 +22,47 @@ practiceQuestion:
 ---
 ## Content
 
-An eval is how you move from "it worked on my example" to "we have evidence this is good enough for this use case."
+"It worked on my example" is a weak release criterion.
 
-At this stage, keep the idea simple. An eval is a repeatable check against examples that represent the behavior you care about.
+For AI systems, an eval is how you move from a promising demo to evidence. It does not have to start as a complex framework. At the beginning, it can be a set of representative cases, expected behaviors, and pass/fail checks.
 
-For an AI support-summary feature, an introductory eval might include:
+For the support-summary feature, an early eval might include tickets with:
 
-- normal tickets with clear customer requests;
-- messy tickets with missing or contradictory context;
-- tickets where the model should admit uncertainty;
-- examples with policy-sensitive or customer-impacting details;
-- expected summaries or scoring criteria for each case.
+- missing context
+- multiple products mentioned
+- angry customer language
+- contradictory statements
+- billing details
+- long technical logs
+- a known answer in the source text
 
-Acceptance criteria define the quality bar.
+Then define acceptance criteria:
 
-For example:
+- the summary must not invent facts
+- the summary must preserve the customer's actual request
+- the summary must flag uncertainty when the source is unclear
+- the summary must omit private data that agents do not need
+- the summary must stay within the target length
 
-- The summary must identify the customer-visible issue.
-- It must not invent account facts.
-- It must preserve policy-sensitive details.
-- It must mark uncertainty when source notes conflict.
-- It must route high-risk cases to human review.
+The eval does not prove the system can never fail. It tells the team whether the feature meets a known quality bar on cases that resemble production.
 
-This does not require a complex eval platform on day one. It does require writing down what "good enough" means before the feature becomes part of a real workflow.
-
-Without evals, a team can only say the system looked good in selected examples. With evals, the team can make a release decision, compare model or prompt changes, and catch regressions when behavior shifts.
+That is the engineering value: the team can discuss behavior with evidence instead of opinions.
 
 ---
 ## Practice
 
-Which control best separates a promising AI demo from a production-ready feature?
+An eval turns a demo into evidence by testing representative cases against explicit acceptance ???.
 
-???
+- criteria
+- colors
+- usernames
 
-- A repeatable eval with acceptance criteria
-- A longer product announcement
-- A more confident demo script
+---
+## Revision
+
+"It worked on my example" is weak because it does not test the system across ??? cases.
+
+- representative
+- identical
+- hidden
+

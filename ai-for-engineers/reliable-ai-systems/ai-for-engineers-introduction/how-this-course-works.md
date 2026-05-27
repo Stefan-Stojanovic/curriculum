@@ -1,7 +1,15 @@
 ---
 author: Stefan-Stojanovic
+
 type: normal
+
 category: discussion
+
+practiceQuestion:
+  formats:
+    - fill-in-the-gap
+  context: standalone
+
 ---
 
 # How This Course Works
@@ -9,19 +17,26 @@ category: discussion
 ---
 ## Content
 
-Each workout is short and practical. You will see engineering scenarios, compare tradeoffs, and make small decisions about AI behavior.
+The lessons in this course are short, but the decisions are real engineering decisions.
 
-Expect questions like:
+You will see scenarios like support summaries, search assistants, document review, code generation, triage, and workflow automation. The point is not to memorize a single architecture. The point is to learn how to evaluate AI behavior under constraints.
 
-- What is the system allowed to do automatically?
-- What output would be unacceptable?
-- What examples would prove this works beyond a demo?
-- What should happen when the model is unsure, slow, expensive, or wrong?
+Expect to practice:
 
-Some insights will ask you to connect the lesson to a system you build, review, or operate. When you want to pressure-test an idea, use Enki AI in the comments to turn your rough answer into a sharper engineering question.
+- reading a system proposal and spotting reliability gaps
+- turning a vague "AI should help here" idea into acceptance criteria
+- choosing an eval or review gate for a specific failure mode
+- deciding when cost or latency makes a stronger model a poor choice
+- identifying when fallback behavior is safer than forcing an answer
 
-For example, you might comment with:
+When an exercise asks you to connect the idea to your own work, use the comments to reason through a feature, incident, or workflow you know. If you want a second perspective, ask Enki AI in the comments to challenge your risk assessment.
 
-> I am considering an AI feature that summarizes incident reports. What failure modes should I test before letting this summary reach customers?
+---
+## Practice
 
-You do not need a perfect system design before moving on. The useful habit is to name the risk, define the evidence, and decide what control belongs around the AI behavior.
+When a lesson asks you to connect an AI reliability idea to your own system, a useful next step is to identify the failure ??? first.
+
+- impact
+- slogan
+- color
+

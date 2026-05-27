@@ -1,11 +1,15 @@
 ---
 author: Stefan-Stojanovic
+
 type: normal
+
 category: must-know
-revisionQuestion:
+
+practiceQuestion:
   formats:
     - fill-in-the-gap
   context: standalone
+
 ---
 
 # Reliability Tradeoffs
@@ -13,34 +17,33 @@ revisionQuestion:
 ---
 ## Content
 
-AI reliability is a system-design problem.
+AI reliability is rarely a single dial called "better."
 
-The question is rarely "Can the model do this at all?" A better question is:
+For the support-summary feature, a larger model might produce better summaries, but it may also increase latency and cost. A stricter prompt might reduce risky claims, but it may omit useful detail. Human review may catch mistakes, but it adds operational load.
 
-> Can this system do the job well enough, often enough, at the right cost and latency, with the right controls around failure?
+Engineers usually balance several constraints:
 
-Engineers usually have to balance several constraints:
+- **capability**: can the system perform the task well enough?
+- **cost**: can the feature run at the expected volume?
+- **latency**: is the response fast enough for the workflow?
+- **variance**: how much does output quality change across cases?
+- **review effort**: who checks the output, and how often?
+- **failure impact**: what happens when the system is wrong?
 
-- **Capability:** Can the model handle the task and domain?
-- **Cost:** Can the product afford the number and size of calls needed?
-- **Latency:** Can users tolerate the response time?
-- **Variance:** How much does output quality change across similar inputs?
-- **Review effort:** Who checks the output, and how often?
-- **Failure impact:** What happens when the system is confidently wrong?
+These are system design tradeoffs, not prompt cleverness contests.
 
-These constraints push against each other.
+A low-impact internal draft can tolerate more variance. A customer-visible action, billing decision, medical note, security alert, or irreversible workflow step needs a higher quality bar and stronger controls.
 
-A stronger model might improve quality but raise cost and latency. A cheaper model might be acceptable if the output is low stakes or always reviewed. Full automation might be reasonable for drafting internal labels, but reckless for issuing refunds, changing permissions, or sending regulated advice.
+The practical question is:
 
-Prompt quality matters, but it is not the whole reliability story. You also need product boundaries, evals, fallback paths, rate limits, logging, monitoring, and humans where judgment is required.
-
-Treat the model as one component inside a larger control system. Reliability comes from the full design, not from hoping the model is clever enough every time.
+> What level of AI autonomy matches the evidence and the cost of being wrong?
 
 ---
-## Revision
+## Practice
 
-AI reliability depends on the full system design, not only on the ???.
+If an AI output can trigger a high-impact customer-visible action, the system usually needs stronger ??? than an internal draft.
 
-- prompt
-- folder name
-- button color
+- controls
+- colors
+- slogans
+
