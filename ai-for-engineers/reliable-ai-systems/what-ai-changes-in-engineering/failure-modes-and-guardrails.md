@@ -1,7 +1,7 @@
 ---
 author: Stefan-Stojanovic
 type: normal
-category: caveat
+category: caveats
 revisionQuestion:
   formats:
     - fill-in-the-gap
