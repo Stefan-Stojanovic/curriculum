@@ -17,6 +17,8 @@ revisionQuestion:
 ---
 ## Content
 
+Start with the first reliability decision: deciding whether a good AI demo is ready for production.
+
 Imagine your team demos a customer-escalation summary feature.
 
 A customer writes a long, messy ticket thread. The AI produces a short escalation summary for the engineer who may need to investigate. In the demo, it works well: the summary is readable, the tone is professional, and the important details are present.
@@ -27,7 +29,6 @@ Production inputs are messier:
 
 - users paste partial logs, screenshots, quoted emails, and angry follow-ups
 - tickets mix billing, technical, account, and deployment details
-- the source conversation may contain false assumptions from the customer
 - the model may confidently summarize something that was never confirmed
 - one bad summary can send the on-call engineer down the wrong path
 

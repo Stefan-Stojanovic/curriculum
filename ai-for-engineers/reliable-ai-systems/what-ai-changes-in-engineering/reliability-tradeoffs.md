@@ -27,11 +27,9 @@ Engineers usually balance several constraints:
 - **cost**: can the feature run at the expected volume?
 - **latency**: is the response fast enough for the workflow?
 - **variance**: how much does output quality change across cases?
-- **review effort**: who checks the output, and how often?
-- **operational fit**: does the workflow still work during incidents or traffic spikes?
 - **failure impact**: what happens when the system is wrong?
 
-These are system design tradeoffs, not prompt cleverness contests.
+Review effort and operational fit matter too, especially during incidents or traffic spikes. These are system design tradeoffs, not prompt cleverness contests.
 
 A low-impact internal draft can tolerate more variance. A customer-visible action, billing decision, medical note, security alert, incident update, or irreversible workflow step needs a higher quality bar and stronger controls.
 

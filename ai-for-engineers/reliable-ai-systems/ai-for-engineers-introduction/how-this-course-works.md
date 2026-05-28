@@ -25,9 +25,8 @@ Expect to practice:
 
 - reading a system proposal and spotting reliability gaps
 - turning a vague "AI should help here" idea into acceptance criteria
-- choosing an eval or review gate for a specific failure mode
-- deciding when cost, latency, or review load makes a stronger model a poor release choice
-- identifying when fallback behavior is safer than forcing an answer
+- choosing an eval, review gate, or fallback for a specific failure mode
+- deciding when cost, latency, or review load changes the release plan
 
 When an exercise asks you to connect the idea to your own work, use the comments to reason through a feature, incident, or workflow you know. If you want a second perspective, ask Enki AI in the comments to challenge your risk assessment.
 

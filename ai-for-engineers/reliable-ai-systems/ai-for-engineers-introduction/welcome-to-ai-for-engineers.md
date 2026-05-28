@@ -30,7 +30,6 @@ In this course, you will practice questions like:
 - What should this AI feature be allowed to decide?
 - What output quality is good enough for release?
 - What evidence proves it works across realistic cases?
-- What should happen when confidence is low or impact is high?
 - What needs human review, logging, monitoring, or fallback behavior?
 
 The goal is not to make you afraid of AI systems. The goal is to help you ship them with clear specs, honest evals, and controls that match the risk.
