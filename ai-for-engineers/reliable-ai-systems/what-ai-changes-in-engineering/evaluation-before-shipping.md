@@ -31,8 +31,6 @@ For the customer-escalation summary feature, an early eval might include tickets
 - missing context
 - multiple products mentioned
 - angry customer language
-- contradictory statements
-- billing details
 - long technical logs
 - a known root cause in the source text
 - a case that should not be escalated
@@ -42,9 +40,9 @@ Then define acceptance criteria:
 - the summary must not invent facts
 - the summary must preserve the customer's actual request and observed symptoms
 - the summary must flag uncertainty when the source is unclear
-- the summary must omit private data that agents do not need
-- the summary must stay within the target length
 - the summary must identify when escalation is not justified
+
+Other checks can cover privacy, target length, and product-specific policy requirements.
 
 The eval does not prove the system can never fail. It tells the team whether the feature meets a known quality bar on cases that resemble production.
 

@@ -31,7 +31,6 @@ Common AI failure modes include:
 - policy violations
 - unsafe automation
 - overconfident summaries
-- unstable output across similar inputs
 
 For the customer-escalation summary feature, a hallucinated fact might say the customer already tried a fix they never mentioned. Missing context might ignore that the customer is asking about billing, not product behavior. Unsafe automation might page an engineering team for a case that should stay in support.
 
@@ -44,8 +43,9 @@ They can include:
 - fallback behavior when inputs are incomplete
 - human review for high-impact cases
 - logging of inputs, outputs, model versions, prompts, and decisions
-- monitoring for drift, complaints, or unusual failure patterns
 - escalation when confidence is low or policy risk is high
+
+Monitoring for drift, complaints, or unusual failure patterns can show whether those guardrails are still working after release.
 
 A guardrail is not decoration. It should be tied to a specific failure mode and a specific consequence.
 
@@ -61,7 +61,7 @@ A useful guardrail should connect to a specific failure ??? and consequence.
 ---
 ## Revision
 
-If an AI support summary lacks enough source context, a safer system may trigger fallback behavior or human ???.
+If a customer-escalation summary lacks enough source context, a safer system may trigger fallback behavior or human ???.
 
 - review
 - celebration
