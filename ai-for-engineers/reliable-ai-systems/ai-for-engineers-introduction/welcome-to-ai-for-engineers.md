@@ -19,26 +19,25 @@ revisionQuestion:
 
 Welcome to AI For Engineers.
 
-This course is about building and operating AI-powered systems with the same seriousness you would bring to any production system. The difference is that AI behavior can be useful before it is fully predictable.
+This course is about building and operating AI-powered systems as production systems. The work is not just picking a model, tuning instructions, or adding an AI button to an existing workflow.
 
-A normal service should return the same result when the inputs and code are the same. An AI feature can vary because the prompt, retrieved context, model version, sampling settings, safety policy, or user input changed.
+AI changes reliability because its behavior can vary across realistic inputs. A normal service should behave the same way when the code and inputs are the same. An AI feature may change because of the system instructions, retrieved context, model version, sampling settings, safety policy, or the way a user phrases a request.
 
-That does not make AI unusable. It means reliability has to be designed around variation.
+That does not make AI systems impossible to ship. It means engineers need reliability habits that match probabilistic behavior.
 
 In this course, you will practice questions like:
 
-- What should this AI feature be allowed to decide?
-- What output quality is good enough for release?
-- What evidence proves it works across realistic cases?
-- What needs human review, logging, monitoring, or fallback behavior?
+- What should the AI feature be allowed to decide?
+- What evidence shows the output is good enough?
+- What should trigger human review, fallback, logging, or escalation?
 
-The goal is not to make you afraid of AI systems. The goal is to help you ship them with clear specs, honest evals, and controls that match the risk.
+The goal is clear engineering judgment: define the job, test realistic cases, and choose controls that match the risk.
 
 ---
 ## Revision
 
-AI For Engineers treats AI-powered features as production systems with ??? behavior.
+AI systems need different reliability habits because their behavior can be ??? across realistic inputs.
 
-- deterministic
 - probabilistic
 - manual
+- decorative

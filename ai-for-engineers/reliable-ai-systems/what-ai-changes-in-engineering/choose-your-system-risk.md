@@ -38,13 +38,13 @@ Write down four things:
 3. What evidence would show it is good enough
 4. What should trigger review, fallback, or escalation
 
-For example:
+Example sketch:
 
-> Feature: customer-escalation summary  
-> Intended output: a short summary for the on-call engineer  
-> Risk: it invents a root cause  
-> Evidence: eval cases with known source facts pass the no-invention check  
-> Review trigger: missing source context, billing risk, or high-severity incident
+- Feature: customer-escalation summary
+- Intended output: a short summary for the on-call engineer
+- Risk: it invents a root cause
+- Evidence: eval cases with known source facts pass a no-invention check
+- Review trigger: missing source context, billing risk, or high-severity incident
 
 This is a small version of the engineering habit behind reliable AI systems: define the job, name the failure, gather evidence, and choose controls that match the impact of being wrong.
 
@@ -53,7 +53,7 @@ If you want to stress-test your answer, post it in the comments and ask Enki AI 
 ---
 ## Practice
 
-For your chosen AI feature, a useful risk sketch should include output, failure risk, evidence, and a review or fallback ???.
+A review ??? tells the system when to pause, fall back, or escalate.
 
 - trigger
 - color
@@ -62,7 +62,7 @@ For your chosen AI feature, a useful risk sketch should include output, failure 
 ---
 ## Revision
 
-Reliable AI design starts by defining the job, naming the failure, gathering evidence, and choosing ??? that match the impact.
+Reliable AI design chooses ??? that match the impact of being wrong.
 
 - controls
 - colors
