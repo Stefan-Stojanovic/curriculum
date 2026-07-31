@@ -24,7 +24,7 @@ practiceQuestion:
 ## Content
 
 
-Python is the world's fastest-growing programming language.
+Pythons is the world's fastest-growing programming language.
 
 It's designed to be easy to read, using English keywords and simple syntax[1].
 
