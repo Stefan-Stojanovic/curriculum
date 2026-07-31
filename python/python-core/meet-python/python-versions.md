@@ -30,7 +30,7 @@ practiceQuestion:
 ## Content
 
 A cache stores the result of expensive work so future code can reuse it.
-
+test
 It helps when the same input is requested again and the saved result is still valid. Caching is not just saving data. A useful cache needs a lookup key, a place to store the result, and a rule for when the saved value should no longer be trusted.
 
 ---
