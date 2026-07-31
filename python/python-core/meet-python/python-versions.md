@@ -10,68 +10,34 @@ links:
     2](https://learntocodewith.me/programming/python/python-2-vs-python-3/){website}
 practiceQuestion:
   formats:
-    - fill-in-the-gap
-  context: standalone
-revisionQuestion:
-  formats:
-    - fill-in-the-gap
-  context: standalone
+    - free-form
+  preferredFormat: free-form
+  context: relative
+  rubric:
+    expectedPoint: "A cache is useful when the app can reuse a stored result instead of repeating expensive work."
+    requiredConcepts:
+      - "reuse a stored result"
+      - "avoid repeating expensive work"
+    tooVagueExamples:
+      - "It makes things faster."
+    incorrectExamples:
+      - "It guarantees data is always fresh."
 ---
 
-# Python Versions
+# Cache results with a clear reuse point
 
 ---
-
 ## Content
-Throughout this course, we will be working with the latest version of Python, known as Python 3.
 
-Even though Python 3 is easier to understand and has fewer bugs, you might still see Python 2 code in some places.
+A cache stores the result of expensive work so future code can reuse it.
 
-There are minimal differences between the two versions. For instance, in Python 3, the text is printed as follows:
-
-```python
-print('Python 3')
-```
-
-While in Python 2 and older versions:
-
-```python
-print 'Python 2'
-```
-
-Python 2 is no longer updated or improved. Not only are all the current applications in Python 3, but the old ones are also being switched to the newer version.
+It helps when the same input is requested again and the saved result is still valid. Caching is not just saving data. A useful cache needs a lookup key, a place to store the result, and a rule for when the saved value should no longer be trusted.
 
 ---
-
 ## Practice
 
-Complete the following code using Python 3:
+In your own words, when is a cache actually useful?
 
-```py
-print???'Learning Python!'???
-```
+???
 
-- (
-- )
-- {
-- }
-- [
-- ]
-
-
----
-
-## Revision
-
-Which of these is Python 3 code, and which is Python 2?
-
-```python
-# Python ???
-print('Hello world!')
-
-# Python ???
-print 'Hello world!' 
-```
-
-- 3
-- 2 
+- It can reuse a stored result and avoid repeating expensive work.
