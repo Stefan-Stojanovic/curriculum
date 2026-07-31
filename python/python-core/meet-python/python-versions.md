@@ -4,10 +4,6 @@ tags:
   - introduction
 type: normal
 category: must-know
-links:
-  - >-
-    [Python 3 Vs Python
-    2](https://learntocodewith.me/programming/python/python-2-vs-python-3/){website}
 practiceQuestion:
   formats:
     - free-form
