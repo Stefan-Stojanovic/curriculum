@@ -48,6 +48,12 @@ Types of change:
 
 ### Fixed
 
+### Added
+
+## May 27th 2026
+
+- [Ai Engineering - full topic - add sample topic to test ](https://github.com/Stefan-Stojanovic/curriculum/pull/26)
+
 
 ### Added
 
