@@ -1,82 +1,83 @@
 ---
-author: emmab
-tags:
-  - introduction
+author: Stefan-Stojanovic
+
 type: normal
-category: tip
-links:
-  - >-
-    [Why Learn
-    Python](https://www.youtube.com/watch?v=Y8Tko2YC5hA){video}
+
+category: must-know
+
 practiceQuestion:
   formats:
-    - fill-in-the-gap
+    - free-form
   context: standalone
+  rubric:
+    expectedPoint: Splitting a request into a sequence lets the learner correct each step before it feeds the next one.
+    requiredConcepts:
+      - Each step can be corrected before it feeds the next one.
+    acceptedAnswers:
+      - You can correct each step before it feeds the next one.
+      - You can review and correct each intermediate result before later steps build on it.
+      - Splitting the work creates checkpoints that stop an early mistake from propagating through the whole output.
+    hints:
+      - What can you do after the themes are produced but before the slide text is written?
+      - Explain what happens to later steps when an early error is fixed at that checkpoint.
+    tooVagueExamples:
+      - It gives you more control.
+    incorrectExamples:
+      - It guarantees that each individual step is accurate.
+      - Its main benefit is avoiding pasting the source material more than once.
+
 revisionQuestion:
   formats:
     - fill-in-the-gap
   context: standalone
----
-
-# Why learn Python?
 
 ---
 
+# Breaking It Into A Sequence
+
+---
 ## Content
 
-Python is the language of the present and the future. Here's why:
+One task per message, each one feeding the next.
 
-- **Simplicity**
+Start here:
 
-It's easy to read and understand. It usually requires less code than other languages like Java and C++ to accomplish the same tasks.
- 
-- **Perfect for Data Science and ML**
+```plain-text
+Group these 20 exit survey responses into themes. Give me the theme, the number of responses in it, and one quoted line per theme.
+```
 
-It has numerous [libraries](https://enki.com/glossary/general/library) that let us tackle complex problems with a few lines of code. That's why Python developers are amongst the highest paid in data-related fields.
+You read the themes, merge two of them, rename another.
 
-- **Huge Community**
+Then:
 
-If you get stuck on a problem, you have a massive online community to help you out. You can always find the answers, whether on Google, Stack Overflow, or even Reddit.
+```plain-text
+Using the six themes above, write four lines of slide text for the top three by response count. Neutral tone, no recommendations.
+```
 
-> "Learn Python not to analyze a spreadsheet, nor to create a website. Learn it to understand something you have understood all your life, but in a new way." 
-> -- *Spiderman*
+Recommendations come third, in their own message, which is where you want your own judgment sitting anyway.
+
+The extra minute buys you somewhere to stand between the steps.
+
+When something's off, you fix it there rather than running the whole thing again.
 
 ---
-
 ## Practice
 
-Python is an easy-to-read language due to its similarity to English.
-
-Can you guess what this code will print if the user's answer is `"Maybe"`?
-
-```python
-answer = input("Are you excited to learn Python?")
-if answer == "Yes":
-  print("That's the spirit! 🎉") 
-else:
-  print("Don't give up, you're doing great! 🤗")
-```
+Why can splitting a dependent task into a sequence produce a more reliable result?
 
 ???
 
-- `"Don't give up, you're doing great! 🤗"`
-- `"That's the spirit! 🎉"`
+- You can correct each step before it feeds the next one.
+- give it less to hold in mind at any one time
+- avoid pasting the material more than once
+- get a more detailed answer overall
 
 ---
-
 ## Revision
 
-What will this code print if the user input is `"Maybe"`?
+You're breaking a five-part request into steps. The first prompt should ask for ???.
 
-```python
-answer = input("Are you excited to learn Python?")
-if answer == "Yes":
-  print("That's the spirit! 🎉") 
-else:
-  print("Don't give up, you're doing great! 🤗")
-```
-
-???
-
-- `"Don't give up, you're doing great! 🤗"`
-- `"That's the spirit! 🎉"`
+- the piece everything after it depends on
+- the piece that takes longest
+- the part you understand least
+- the final output in rough form
