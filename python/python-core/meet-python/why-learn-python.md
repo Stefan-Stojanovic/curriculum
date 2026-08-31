@@ -13,10 +13,6 @@ practiceQuestion:
     expectedPoint: Splitting a request into a sequence lets the learner correct each step before it feeds the next one.
     requiredConcepts:
       - Each step can be corrected before it feeds the next one.
-    acceptedAnswers:
-      - You can correct each step before it feeds the next one.
-      - You can review and correct each intermediate result before later steps build on it.
-      - Splitting the work creates checkpoints that stop an early mistake from propagating through the whole output.
     hints:
       - What can you do after the themes are produced but before the slide text is written?
       - Explain what happens to later steps when an early error is fixed at that checkpoint.
